@@ -18,9 +18,6 @@ tbd | Statistical analysis
 - Statistical Analysis
   - two analyses for exp1 and exp2 separately
 
-## "Assignment" of tasks
-- [ ]
-- [ ]  
 ## Question for Franke
 - experiments in one or separate?
 - Netlify from folder?
