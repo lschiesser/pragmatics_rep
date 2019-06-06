@@ -21,3 +21,6 @@ tbd | Statistical analysis
 ## "Assignment" of tasks
 - [ ]
 - [ ]  
+## Question for Franke
+- experiments in one or separate?
+- Netlify from folder?
