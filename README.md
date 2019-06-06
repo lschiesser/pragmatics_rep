@@ -17,7 +17,10 @@ tbd | Statistical analysis
   - experiment 2:
 - Statistical Analysis
   - two analyses for exp1 and exp2 separately
+## General Questions to answer during familiarization
+- Which scale would be best to replicate for second experiment? (hearts, numbers, starts, ...)
 
 ## Question for Franke
 - experiments in one or separate?
 - Netlify from folder?
+- Scale?
