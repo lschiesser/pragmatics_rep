@@ -6,7 +6,7 @@
   - "Imagine [Person1] [performs action A1], and [Person2] [evaluates it via action A2]"
   - "Here's how [Person2] felt about [Person1]'s [action]:" [Display of rating]
   - "Do you think [Person2] thought that [Person1]'s [action] was [terrible, bad, okay, good, amazing]?
-  - opttions for answer: yes or no
+  - options for answer: yes or no
 - 25 scenarios (5 true states x 5 words)
 ### Analysis
 - collapse across contexts
