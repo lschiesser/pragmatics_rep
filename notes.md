@@ -18,3 +18,9 @@
   - numerical indication 1 to 5
   - figurative indication with scale of 5 stars or hearts
 - 15 scenarios (3 goals x 5 words)
+## Experiment 3
+- same context items and utterances as in Exp 2
+- provided information about true states
+- "Based on what [Person2] said, how likely do you think that [Person2]'s goal was to be: honest, nice, mean'"
+- participant's task: infer likelihood of [Person2]'s goals to be honest, nice and mean
+- 25 scenarios (5 true states x 5 words)
