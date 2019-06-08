@@ -24,3 +24,4 @@
 - "Based on what [Person2] said, how likely do you think that [Person2]'s goal was to be: honest, nice, mean'"
 - participant's task: infer likelihood of [Person2]'s goals to be honest, nice and mean
 - 25 scenarios (5 true states x 5 words)
+- 
