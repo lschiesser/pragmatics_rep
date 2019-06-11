@@ -52,5 +52,5 @@ tbd | Writing of report |
   - hypothesis 2: utterance inconsistent with goal: only for mean? (intuition) ; post hoc hypotheses
 
 ## Links to experiments
-- [Experiment 1](http://langcog.stanford.edu/expts/EJY/polgrice/L2_S/polgrice_L2_S.html)
-- [Experiment 2](http://langcog.stanford.edu/expts/EJY/polgrice/L2_J/polgrice_L2_J.html)
+- [Experiment 2](http://langcog.stanford.edu/expts/EJY/polgrice/L2_S/polgrice_L2_S.html)
+- [Experiment 1](http://langcog.stanford.edu/expts/EJY/polgrice/L2_J/polgrice_L2_J.html)
