@@ -33,6 +33,8 @@ tbd | Writing of report |
 - Scale?
 - adjustment of names ?
 - due date?
+- hypotheses ok?
+- can mean be left out?
 
 ## Design
 - General conditions
