@@ -20,11 +20,8 @@ tbd | Writing of report |
 - Hypothesis formulation and structure of Experiment
   - Two experiments or two parts of one?
   - Stimuli prep
-- experiments
-  - experiment 1: one to one translation and Replication
-  - experiment 2:
+- experiment 2
 - Statistical Analysis
-  - two analyses for exp1 and exp2 separately
 
 ## General Questions to answer during familiarization
 - Which scale would be best to replicate for second experiment? (hearts, numbers, starts, ...)
@@ -45,10 +42,6 @@ tbd | Writing of report |
   - 5 states (1-5 hearts), uniform prior distribution
   - utterances {terrible, bad, ok, good, amazing}
   - 3 goals: honest, nice, mean
-- Exp 1: literal semantics measurement
-  - 30 participants, 13 randomized context items, 25 scenarios (5 states x 5 utterances), Yes/No answers
-  - analysis across contexts
-  - fraction of participants choosing utterance w for state s = literal meaning function value
 - Exp 2: measurement of listener's inference about state given utterance and goal
   - 35 participants, context items with question about performance, 15 randomized items / participant (3 goals x 5 states), rating task on heart scale
   - hypothesis 1: utterance consistent with goal:
@@ -63,7 +56,7 @@ tbd | Writing of report |
   - Task description
   - 15 randomized trials
 - same gender per task
-- 
+-
 
 ## Links to experiment
 - [Experiment 2](http://langcog.stanford.edu/expts/EJY/polgrice/L2_S/polgrice_L2_S.html)
