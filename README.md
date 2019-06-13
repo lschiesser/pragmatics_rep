@@ -6,13 +6,15 @@ Due Date | Topic | Assigned to
 11.06.19 | Hypothesis and structure of Experiment | all
 13.06.19 | Rücksprache mit Franke | all
 30.06.19 | Translation of prompts | Caro
+30.06.19 | Instructions |
 30.06.19 | Experiment coding | Marc, Lukas
 30.06.19 | First trial of experiments testing for usability/clearness | all
 30.06.19 | Coding of statistical analysis | Polina
-tbd | Pre-registration report |
+tbd | Pre-registration report | all
 tbd | Data acquisition | all
 tbd | Statistical analysis | Polina
 tbd | Writing of report |
+19.07.19 | Expected submission date | ---
 
 ## Details for Plan
 - Hypothesis formulation and structure of Experiment
@@ -28,10 +30,12 @@ tbd | Writing of report |
 - Which scale would be best to replicate for second experiment? (hearts, numbers, starts, ...)
 
 ## Question for Franke
-- experiments in one or separate?
-- Netlify from folder?
+- experiments in one or separate? only one experiment (experiment 2)
 - Scale?
+  - Übernehmen von Herzen
+  - ordinale Regression
 - adjustment of names ?
+  - randomizing names
 - due date?
 - hypotheses ok?
 - can mean be left out?
@@ -53,6 +57,5 @@ tbd | Writing of report |
     3. mean(mean_inferred) > mean(nice_inferred)
   - hypothesis 2: utterance inconsistent with goal: only for mean? (intuition) ; post hoc hypotheses
 
-## Links to experiments
+## Links to experiment
 - [Experiment 2](http://langcog.stanford.edu/expts/EJY/polgrice/L2_S/polgrice_L2_S.html)
-- [Experiment 1](http://langcog.stanford.edu/expts/EJY/polgrice/L2_J/polgrice_L2_J.html)
