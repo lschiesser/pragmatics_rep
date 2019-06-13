@@ -17,6 +17,11 @@ tbd | Statistical analysis | Polina
 tbd | Writing of report |
 19.07.19 | Expected submission date | ---
 
+## To-Do list
+Task | Assigned to | Due date | Done?
+----|------|-------|--------
+
+
 ## Details for Plan
 - Hypothesis formulation and structure of Experiment
   - Two experiments or two parts of one?
@@ -34,7 +39,7 @@ tbd | Writing of report |
   - ordinale Regression
 - adjustment of names ?
   - randomizing names
-- due date?
+- due date? :white_check_mark:
 - hypotheses ok?
 - can mean be left out?
 
