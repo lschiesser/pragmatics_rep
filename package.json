@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babe-project": "~0.1.0"
+    "babe-project": "~0.1.0",
+    "jquery": "^3.4.1"
   }
 }
