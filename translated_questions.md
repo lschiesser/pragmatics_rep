@@ -5,7 +5,7 @@ Was denken Sie: „Wie denkt **Laura** wirklich über die Präsentation von **An
 
 *Die dick gedruckten Wöter werden in den nachfolgenden Sätzen durch geshuffelte Variablen ersetzt.*
 
-####Variablen:
+#### Variablen:
 Frauennamen: Julia, Laura, Anna, Marie, Hannah, Paula, Lea, Annika, Sarah, Emma
 
 Männernamen: Jonas, Lukas, Daniel, Alex, Paul, Jan, Phillip, Markus, Christoph, Karl
