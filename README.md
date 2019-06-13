@@ -6,7 +6,7 @@ Due Date | Topic | Assigned to
 11.06.19 | Hypothesis and structure of Experiment | all
 13.06.19 | Rücksprache mit Franke | all
 30.06.19 | Translation of prompts | Caro
-30.06.19 | Instructions |
+30.06.19 | Instructions | Caro
 30.06.19 | Experiment coding | Marc, Lukas
 30.06.19 | First trial of experiments testing for usability/clearness | all
 30.06.19 | Coding of statistical analysis | Polina
@@ -56,6 +56,14 @@ tbd | Writing of report |
     2. mean(mean_inferred) > mean(honest_inferred)
     3. mean(mean_inferred) > mean(nice_inferred)
   - hypothesis 2: utterance inconsistent with goal: only for mean? (intuition) ; post hoc hypotheses
+
+## Details for Experiment coding
+- Sequence
+  - Welcome view
+  - Task description
+  - 15 randomized trials
+- same gender per task
+- 
 
 ## Links to experiment
 - [Experiment 2](http://langcog.stanford.edu/expts/EJY/polgrice/L2_S/polgrice_L2_S.html)
