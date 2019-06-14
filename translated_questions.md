@@ -3,7 +3,7 @@ Stellen Sie sich vor, dass **Anna** eine Präsentation gehalten hat, aber nicht 
 **Laura** möchte **ehrlich** sein und antwortet: „Deine Präsentation war **hervorragend**.“
 Was denken Sie: „Wie denkt **Laura** wirklich über die Präsentation von **Anna**?“
 
-*Die dick gedruckten Wöter werden in den nachfolgenden Sätzen durch geshuffelte Variablen ersetzt.*
+*Die dick gedruckten Wörter werden in den nachfolgenden Sätzen durch geshuffelte Variablen ersetzt.*
 
 #### Variablen:
 Frauennamen: Julia, Laura, Anna, Marie, Hannah, Paula, Lea, Annika, Sarah, Emma
