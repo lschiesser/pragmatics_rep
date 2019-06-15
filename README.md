@@ -20,7 +20,8 @@ tbd | Writing of report |
 ## To-Do list
 Task | Assigned to | Due date | Done?
 ----|------|-------|--------
-
+write welcome text|Caro|20.06.19|:white_check_mark:
+translate questions|Caro|20.06.19|:white_check_mark:
 
 ## Details for Plan
 - Hypothesis formulation and structure of Experiment
