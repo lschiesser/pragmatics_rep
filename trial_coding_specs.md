@@ -1,6 +1,6 @@
 # Specifications for coding of the trials
 
-In the showroom file there already are two custom views definded.
+In the showroom files there already are two custom views defined.
 Here is a code snippet from this that is concerned with recording the trial data
 ```javascript
                 let trial_data = {
@@ -13,5 +13,5 @@ Here is a code snippet from this that is concerned with recording the trial data
 Trial data which should be recorded during the trial:
 - trial name
 - trial number
-- response
+- inferred goal state
 - true goal state
