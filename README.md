@@ -6,12 +6,12 @@ Due Date | Topic | Assigned to
 11.06.19 | Familiarize with topic | all
 11.06.19 | Hypothesis and structure of Experiment | all
 13.06.19 | Rücksprache mit Franke | all
-30.06.19 | Translation of prompts | Caro
-30.06.19 | Instructions | Caro
-30.06.19 | Experiment coding | Marc, Lukas
-30.06.19 | First trial of experiments testing for usability/clearness | all
-30.06.19 | Coding of statistical analysis | Polina
-tbd | Pre-registration report | all
+26.06.19 | Translation of prompts | Caro
+26.06.19 | Instructions | Caro
+26.06.19 | Experiment coding | Marc, Lukas
+26.06.19 | First trial of experiments testing for usability/clearness | all
+26.06.19 | Coding of statistical analysis | Polina
+28.06.19 | Pre-registration report | all
 tbd | Data acquisition | all
 tbd | Statistical analysis | Polina
 tbd | Writing of report |

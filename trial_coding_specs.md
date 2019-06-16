@@ -15,3 +15,11 @@ Trial data which should be recorded during the trial:
 - trial number
 - inferred goal state
 - true goal state
+
+```javascript
+                let trial_data = {
+                  trial_number: config.name,
+                  trial_number: CT,
+                  response: 
+                }
+```
