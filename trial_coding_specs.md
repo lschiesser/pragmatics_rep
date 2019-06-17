@@ -11,15 +11,21 @@ Here is a code snippet from this that is concerned with recording the trial data
 
 ```
 Trial data which should be recorded during the trial:
-- trial name
-- trial number
-- inferred goal state
-- true goal state
+
+Variable name | Description | Value
+---|---|---
+trial name | Name of trial | e.g. "pragmatics"
+trial number | Number of trial | numerical
+goal | goal of speaker | gemein, ehrlich, nett
+utterance | utterance of speaker | furchtbar, schlecht, okay, gut, hervorragend
+inferred goal state | goal state  inferred by participant | 1, 2, 3, 4, 5
 
 ```javascript
                 let trial_data = {
                   trial_number: config.name,
                   trial_number: CT,
-                  response: 
+                  goal: ,
+                  utterance: ,
+                  inferred_goal_state: 
                 }
 ```
