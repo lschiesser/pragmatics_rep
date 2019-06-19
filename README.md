@@ -52,11 +52,13 @@ change text from "Dein/e/er" zu "Der/Die/Das" in prompt generator|Marc|---|✅
   - 3 goals: honest, nice, mean
 - Exp 2: measurement of listener's inference about state given utterance and goal
   - 35 participants, context items with question about performance, 15 randomized items / participant (3 goals x 5 states), rating task on heart scale
-  - hypothesis 1: utterance consistent with goal:
+  - hypothesis 1: positive utterances:
     1. mean(nice_inferred) < mean (honest_inferred)
-    2. mean(mean_inferred) > mean(honest_inferred)
-    3. mean(mean_inferred) > mean(nice_inferred)
-  - hypothesis 2: utterance inconsistent with goal: only for mean? (intuition) ; post hoc hypotheses
+    2. mean(nice_inferred) > mean(mean_inferred)
+  - hypothesis 2: negative utterances:
+    1. mean(mean_inferred) > mean(honest_inferred)
+    2. mean(honest_inferred) = mean(nice_inferred)
+  - when coding data analysis, ordinal scale brm will be used (group ontervals are fitted)  
 
 ## Details for Experiment coding
 - Sequence
