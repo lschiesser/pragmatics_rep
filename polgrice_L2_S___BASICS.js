@@ -349,7 +349,7 @@ var sents = {
 	},        
 	   Kuchen: {
             sent_precontext: "Stellen Sie sich vor, dass LS einen Kuchen gebacken hat, ", 
-            sent_context: " SP hat den Kuchen gegessen. LS fragt daraufhin SP: \"Wie war Kuchen geschmeckt?\"", 
+            sent_context: " SP hat den Kuchen gegessen. LS fragt daraufhin SP: \"Wie war mein Kuchen?\"", 
             BB: "Der Kuchen",
 			BK: "den Kuchen",
 	},
@@ -384,7 +384,7 @@ var sents = {
 			BK: "das Bild",
 	}, 
 	   Monolog: {
-            sent_precontext: "Stellen Sie sich vor, dass LS einen Monolog vorgetragen hat, ", 
+            sent_precontext: "Stellen Sie sich vor, dass LS einen Monolog bei einem Theaterstück vorgetragen hat, ", 
             sent_context: " SP hat den Monolog gehört. LS fragt daraufhin SP: \"Wie war mein Monolog?\"", 
             BB: "Der Monolog",
 			BK: "den Monolog",
@@ -397,12 +397,12 @@ var sents = {
 	},
 	   Rezension: {
             sent_precontext: "Stellen Sie sich vor, dass LS eine Rezension für ein Buch geschrieben hat, ", 
-            sent_context: " SP hat die Rezension gelesen. LS fragt daraufhin SP: \"Wie war meine Rezension?\"", 
+            sent_context: " SP hat die Rezension gelesen. LS fragt daraufhin SP: \"Wie ist meine Rezension?\"", 
             BB: "Die Rezension",
 			BK: "die Rezension",
 	},
 	   Konzert: {
-            sent_precontext: "Stellen Sie sich vor, dass LS ein Klavier Konzert hat ", 
+            sent_precontext: "Stellen Sie sich vor, dass LS ein Klavierkonzert gespielt hat ", 
             sent_context: " SP hat das Konzert gehört. LS fragt daraufhin SP: \"Wie war mein Konzert?\"", 
             BB: "Das Konzert",
 			BK: "das Konzert",
