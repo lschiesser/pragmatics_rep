@@ -18,12 +18,16 @@
 ## Sampling plan
 
 - how many participants will you recruit, and how, where, when?
+- Answer: 30, Coxi mailing list + course participants, after prereg report has been approved (end of july)
 - any special restriction as to who qualifies?
+- Answer: native german speakers only
 
 ## Materials
 
 - what materials will you be using? how where they produced
+- Answer: the original experiment, star rating plugin
 - you could include a link to the material if it is available online
+- Answer: https://www.jqueryscript.net/other/Simple-jQuery-Star-Rating-System-For-Bootstrap-3.html, http://langcog.stanford.edu/expts/EJY/polgrice/L2_S/
 
 ## Procedure
 
@@ -31,7 +35,9 @@
     - similar to the statement in the Mental Rotation Task description, but possibly already in full prose
 - what is the structure of the experiment?
 - what types of trials are there (critical, filler, ...)?
+- Answer: only main experiment
 - how is each (type of) trial structured? (e.g., first fixation cross for 50ms, then ...)
+- Answer: question + answer via heart rating (1-5)
 
 ## Measured variables
 
