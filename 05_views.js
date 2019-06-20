@@ -103,13 +103,16 @@ const thanks = babeViews.view_generator("thanks", {
 
 const scenes = composeArray();
 // Here, we initialize a normal forced_choice view
-const pragmatics = custom_pragmatics({
-  name: pragmatics,
+const pragmatics_1 = custom_pragmatics({
+  name: 'pragmatics',
   trials: 1,
   data: [
     {
       context: scenes[0][3] + scenes[0][7] + scenes[0][1] + scenes[0][8] + scenes[0][0],
       question: scenes[0][5],
+      goal: scenes[0][10],
+      utterance: scenes[0][11],
+      domain: scenes[0][9]
     }
   ]
 })

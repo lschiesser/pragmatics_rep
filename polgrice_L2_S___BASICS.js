@@ -517,6 +517,9 @@ function composeArray () {
     goal = trial.goal;
     console.log(domain);
     sent_materials = doSentSubs(sents, state, domain, utterance, people, goal);
+    sent_materials.push(domain);
+    sent_materials.push(goal);
+    sent_materials.push(utterance);
     console.log(sent_materials);
     //context = sent_materials[3] + sent_materials[7] + sent_materials[1] + sent_materials[8] + sent_materials[0];
     //console.log(context);
