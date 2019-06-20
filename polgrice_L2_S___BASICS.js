@@ -278,11 +278,11 @@ shuffle(
     ])
 ]); 
 
-speakers = shuffle([["John","Bob",], ["Hailey", "Mika"], ["Karen", "Jenny"], ["Kyle", "James"], ["Sean", "Chris"],
-                    ["Lucy", "Sarah"], ["Bill", "Tom"], ["Heather", "Grace"], ["Jake", "Kevin"], ["Ann", "Diana"],
-                    ["George", "Henry"], ["Nathan", "Patrick"], ["Wendy", "Emma"], ["Stephanie", "Barbara"], ["Oliver", "Robert"],
-                    ["Matt", "Larry"], ["Steven", "Zack"], ["Fiona", "Yvonne"], ["Rebecca", "Cheryl"], ["Victoria", "Jasmine"],
-                    ["Albert", "Frank"], ["Greg", "Colin"], ["Ed", "Peter"], ["Molly", "Kara"], ["Justine", "Kelly"]]);
+speakers = shuffle([["Lukas","Leon",], ["Anna", "Hannah"], ["Lea", "Leonie"], ["Tim", "Luka"], ["Fynn", "Jonas"],
+                    ["Lena", "Johanna"], ["Jan", "Niklas"], ["Laura", "Sarah"], ["Felix", "Paul"], ["Marie", "Emily"],
+                    ["Tom", "Max"], ["Louis", "Julian"], ["Emma", "Sophie"], ["Lara", "Julia"], ["Philip", "Ben"],
+                    ["Jannik", "Moritz"], ["Marc", "Niko"], ["Mia", "Yvonne"], ["Rebecca", "Lina"], ["Alina", "Lisa"],
+                    ["David", "Simon"], ["Alexander", "Elias"], ["Fabian", "Noah"], ["Amelie", "Louisa"], ["Paula", "Annika"]]);
 speakers1 = shuffle(speakers[0]);
 speakers2 = shuffle(speakers[1]);
 speakers3 = shuffle(speakers[2]);
@@ -335,7 +335,7 @@ var sents = {
             BB: "Der Vortrag",
 			BK: "den Vortrag",
 	},
-	   Keks: {
+	   Kekse: {
             sent_precontext: "Stellen Sie sich vor, dass LS Kekse gebacken hat, ", 
             sent_context: " SP hat die Kekse probiert. LS fragt daraufhin SP: \"Wie findest du meine Kekse?\"", 
             BB: "Der Keks",
