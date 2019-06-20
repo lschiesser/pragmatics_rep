@@ -34,9 +34,9 @@ const custom_pragmatics = function(config) {
                 </div>`);
 
             // This function will handle  the response
-            const handle_click = function(star) {
-              if (ValidateStar(star)) {
-                console.log(printResult(star))
+            const handle_click = function() {
+              if (ValidateStar(document.star)) {
+                console.log(printResult(document.star))
                 // We will just save the response and continue to the next view
                 let trial_data = {
                     trial_name: config.name,
@@ -58,6 +58,7 @@ const custom_pragmatics = function(config) {
             };
             const ValidateStar = function(form) {
               var judgment = $(".rating-stars").attr("style");
+              console.log("judgment: ", judgment);
               judgment = parseInt(judgment.replace(/[^\d.]/g, ''));
               console.log("judgment: ", judgment); //for debuggging
               if (judgment == 0) {
