@@ -331,79 +331,79 @@ var sents = {
     domains: {
        Vortrag: {
             sent_precontext: "Stellen Sie sich vor, dass LS gerade einen Vortrag gehalten hat, ", 
-            sent_context: " SP hat die Präsentation gesehen. LS fragt daraufhin SP: \"Wie war meine Präsentation?\"",
+            sent_context: " SP hat den Vortrag gesehen. LS fragt daraufhin SP: \"Wie war mein Vortrag?\"",
             BB: "Der Vortrag",
 			BK: "den Vortrag",
 	},
 	   Kekse: {
             sent_precontext: "Stellen Sie sich vor, dass LS Kekse gebacken hat, ", 
-            sent_context: " SP hat die Kekse probiert. LS fragt daraufhin SP: \"Wie findest du meine Kekse?\"", 
+            sent_context: " SP hat die Kekse probiert. LS fragt daraufhin SP: \"Wie waren meine Kekse?\"", 
             BB: "Der Keks",
 			BK: "den Keks",
 	},
 	   Gedicht: {
             sent_precontext: "Stellen Sie sich vor, dass LS ein Gedicht geschrieben hat, ", 
-            sent_context: " SP hat das Gedicht gelesen. LS fragt daraufhin SP: \"Wie findest du mein Gedicht?\"", 
+            sent_context: " SP hat das Gedicht gelesen. LS fragt daraufhin SP: \"Wie war mein Gedicht?\"", 
             BB: "Das Gedicht",
 			BK: "das Gedicht",
 	},        
 	   Kuchen: {
             sent_precontext: "Stellen Sie sich vor, dass LS einen Kuchen gebacken hat, ", 
-            sent_context: " SP hat den Kuchen gegessen. LS fragt daraufhin SP: \"Wie hat mein Kuchen geschmeckt?\"", 
+            sent_context: " SP hat den Kuchen gegessen. LS fragt daraufhin SP: \"Wie war mein Kuchen?\"", 
             BB: "Der Kuchen",
 			BK: "den Kuchen",
 	},
 	   Lied: {
             sent_precontext: "Stellen Sie sich vor, dass LS ein Lied geschrieben hat, ", 
-            sent_context: " SP hat das Lied gehört. LS fragt daraufhin SP: \"Wie findest du mein Lied?\"", 
+            sent_context: " SP hat das Lied gehört. LS fragt daraufhin SP: \"Wie war mein Lied?\"", 
             BB: "Das Lied",
 			BK: "das Lied",
 	},
 	   Film: {
             sent_precontext: "Stellen Sie sich vor, dass LS einen Film gedreht hat, ", 
-            sent_context: " SP hat den Film gesehen. LS fragt daraufhin SP: \"Wie findest du meinen Film?\"", 
+            sent_context: " SP hat den Film gesehen. LS fragt daraufhin SP: \"Wie war mein Film?\"", 
             BB: "Der Film",
 			BK: "den Film",
 	},
 	   Solo: {
             sent_precontext: "Stellen Sie sich vor, dass LS ein Cello Solo gespielt hat, ", 
-            sent_context: " SP hat das Cello Solo gehört. LS fragt daraufhin SP: \"Wie findest du mein Cello Solo?\"", 
+            sent_context: " SP hat das Cello Solo gehört. LS fragt daraufhin SP: \"Wie war mein Cello Solo?\"", 
             BB: "Das Solo",
 			BK: "das Solo",
 	},        
 	   Stepptanz: {
             sent_precontext: "Stellen Sie sich vor, dass LS einen Stepptanz aufgefuehrt hat, ", 
-            sent_context: " SP hat den Stepptanz Auftritt gesehen. LS fragt daraufhin SP: \"Wie findest du meinen Stepptanz Auftritt?\"", 
+            sent_context: " SP hat den Stepptanz Auftritt gesehen. LS fragt daraufhin SP: \"Wie war mein Stepptanz Auftritt?\"", 
             BB: "Der Stepptanz",
 			BK: "den Stepptanz",
 	},   
 	   Bild: {
             sent_precontext: "Stellen Sie sich vor, dass LS ein Bild gemalt hat, ", 
-            sent_context: " SP hat das Bild gesehen. LS fragt daraufhin SP: \"Wie findest du mein Bild?\"", 
+            sent_context: " SP hat das Bild gesehen. LS fragt daraufhin SP: \"Wie ist mein Bild?\"", 
             BB: "Das Bild",
 			BK: "das Bild",
 	}, 
 	   Monolog: {
-            sent_precontext: "Stellen Sie sich vor, dass LS einen Monolog vorgetragen hat, ", 
-            sent_context: " SP hat den Monolog gehört. LS fragt daraufhin SP: \"Wie findest du meinen Monolog?\"", 
+            sent_precontext: "Stellen Sie sich vor, dass LS einen Monolog bei einem Theaterstück vorgetragen hat, ", 
+            sent_context: " SP hat den Monolog gehört. LS fragt daraufhin SP: \"Wie war mein Monolog?\"", 
             BB: "Der Monolog",
 			BK: "den Monolog",
 	},
 	   App: {
             sent_precontext: "Stellen Sie sich vor, dass LS eine Handy App entwickelt hat, ", 
-            sent_context: " SP hat die App ausprobiert. LS fragt daraufhin SP: \"Wie findest du meine App?\"", 
+            sent_context: " SP hat die App ausprobiert. LS fragt daraufhin SP: \"Wie ist meine App?\"", 
             BB: "Die App",
 			BK: "die App",
 	},
 	   Rezension: {
             sent_precontext: "Stellen Sie sich vor, dass LS eine Rezension für ein Buch geschrieben hat, ", 
-            sent_context: " SP hat die Rezension gelesen. LS fragt daraufhin SP: \"Wie findest du meine Rezension?\"", 
+            sent_context: " SP hat die Rezension gelesen. LS fragt daraufhin SP: \"Wie ist meine Rezension?\"", 
             BB: "Die Rezension",
 			BK: "die Rezension",
 	},
 	   Konzert: {
-            sent_precontext: "Stellen Sie sich vor, dass LS ein Klavier Konzert hat ", 
-            sent_context: " SP hat das Konzert gehört. LS fragt daraufhin SP: \"Wie findest du mein Konzert?\"", 
+            sent_precontext: "Stellen Sie sich vor, dass LS ein Klavierkonzert gespielt hat ", 
+            sent_context: " SP hat das Konzert gehört. LS fragt daraufhin SP: \"Wie war mein Konzert?\"", 
             BB: "Das Konzert",
 			BK: "das Konzert",
 	},
@@ -622,11 +622,6 @@ var experiment = {
 	experiment.data.expt_gen.push(document.getElementById("expcomments").value);
     showSlide("finished");
       
-//    			//Decrement			
-//			var xmlHttp = null;
-//			xmlHttp = new XMLHttpRequest()
-//			xmlHttp.open("GET", "http://langcog.stanford.edu/cgi-bin/subject_equalizer/decrementer.php?filename=" + filename + "&to_decrement=" + cond, false);
-//			xmlHttp.send(null)
       
     setTimeout(function() {turk.submit(experiment.data) }, 1500);
   },
