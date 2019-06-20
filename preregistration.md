@@ -1,13 +1,26 @@
 # Background
 
 - indicate the theoretical background of your study
+    - basis study to state inferences/influence of Du/Sie in German (politeness)
+    - original study was used to create a model, which predicts how key words influence people's perception of politeness
 - why is this interesting? where are your research questions coming from
+    - interested in cross-linguistic comparisons and studies
+    - politeness: German has politeness markers like "Sie"
+    - intuition: interpretation differs depending on the use of "du" or "Sie"
+    - question: will we get the same results as the study in English, if we completely avoid using "du" and "Sie"
 
 # Research questions
 
 - formulate your research question in clear natural language 
 - give them recognizable names if there are several or number them (like H1, H2 etc.)
 - you will restate these research questions more clearly after you have specified the design (see below)
+- Answer:
+1. hypothesis 1: positive utterances:
+    - mean(nice_inferred) < mean (honest_inferred)
+    - mean(nice_inferred) > mean(mean_inferred)
+2. hypothesis 2: negative utterances:
+    - mean(mean_inferred) > mean(honest_inferred)
+    - mean(honest_inferred) = mean(nice_inferred)
 
 # Design of the Experiment
 
