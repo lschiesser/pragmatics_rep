@@ -34,6 +34,7 @@
 - describe the experiment here pretty much like you would in a research article without space constraints
     - similar to the statement in the Mental Rotation Task description, but possibly already in full prose
 - what is the structure of the experiment?
+- Answer: Introduction, main exp, feedback, thank you
 - what types of trials are there (critical, filler, ...)?
 - Answer: only main experiment
 - how is each (type of) trial structured? (e.g., first fixation cross for 50ms, then ...)
