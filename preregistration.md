@@ -43,6 +43,7 @@
 
 - based on the design you described, what are the variables that you are going to measure?
 - how will they be measured in the experiment?
+- Answer: via the heart rating scale
 - how will they be treated (e.g., rating scale data will be treated as an ordinal variable; or: XYZ is a factor with 2 levels (A and B) where A is the reference level in dummy coding)
 
 
@@ -52,7 +53,9 @@
 
 - what are the criteria based on which you would exclude data from the analysis
 - for single trial data
+- Answer: took longer than XXX
 - for data from a whole participant
+- Answer: no native speaker, took longer than XXX
 - ...
 
 ## Confirmatory hypothesis testing
