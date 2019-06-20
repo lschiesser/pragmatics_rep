@@ -31,7 +31,7 @@ const intro = babeViews.view_generator("intro",{
             <br />
             <br />
             This is a minimal experiment with one forced choice view. It can serve as a starting point for programming your own experiment.`,
-   buttonText: 'Begin the experiment'    
+   buttonText: 'Begin the experiment'
 });
 
 // For most tasks, you need instructions views
@@ -101,19 +101,18 @@ const thanks = babeViews.view_generator("thanks", {
 * https://babe-project.github.io/babe-docs/01_designing_experiments/01_template_views/#trial-views
 */
 
-
+const scenes = composeArray();
 // Here, we initialize a normal forced_choice view
-const forced_choice_2A = babeViews.view_generator("forced_choice", {
-    // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
-    trials: trial_info.forced_choice.length,
-    // name should be identical to the variable name
-    name: 'forced_choice_2A',
-    data: trial_info.forced_choice,
-    // you can add custom functions at different stages through a view's life cycle
-    // hook: {
-    //     after_response_enabled: check_response
-    // }
-});
+const pragmatics = custom_pragmatics({
+  name: pragmatics,
+  trials: 1,
+  data: [
+    {
+      context: scenes[0][3] + scenes[0][7] + scenes[0][1] + scenes[0][8] + scenes[0][0],
+      question: scenes[0][5],
+    }
+  ]
+})
 
 // There are many more templates available:
 // forced_choice, slider_rating, dropdown_choice, testbox_input, rating_scale, image_selection, sentence_choice,
