@@ -48,7 +48,11 @@
 
 - describe the experiment here pretty much like you would in a research article without space constraints
     - similar to the statement in the Mental Rotation Task description, but possibly already in full prose
-    - Answer: 
+- **Answer:** 
+- Instructions: The participants are presented with written instructions on how the experiment will look like and what their task will be. Here they also state, that their participation is voluntary and they are informed how we will process the data. **Screenshot of scenario and rating scale?**
+- We decided not to include a practice phase, because it was also not part of the original study.
+- Main test phase:
+    - Trial sequence: The trials start with the presentation of the scenario and underneath the participant sees the rating scale consisting of 5 hearts. Participants are asked to rate a total of 15 scenarios using the rating scale.
 - what is the structure of the experiment?
     - Answer: Introduction, main exp, feedback, thank you
 - what types of trials are there (critical, filler, ...)?
