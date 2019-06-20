@@ -23,6 +23,7 @@ Task | Assigned to | Due date | Done?
 write welcome text|Caro|20.06.19|:white_check_mark:
 translate questions|Caro|20.06.19|:white_check_mark:
 change text from "Dein/e/er" zu "Der/Die/Das" in prompt generator|Marc|---|✅
+change sentences in polgrice...|Caro|21.06.2019|
 
 ## Details for Plan
 - Hypothesis formulation and structure of Experiment
