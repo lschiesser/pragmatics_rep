@@ -25,11 +25,16 @@ const custom_pragmatics = function(config) {
             $("main").html(`<div class='babe-view'>
                 <p id="context" class="block-text"></p>
                 <p id = "question" class="block-text"></p>
-                <div id="test" name= "star" align="center">
-                    <input id="rating-system" type="number" class="rating"
-                           min="0" max="5" step="1"
-                           data-showCaption="true" showClear="false" hoverEnabled="false">
-                    <button id="next" class='babe-view-button'>Next</button>
+                <div class="container">
+                  <form>
+                    <div id="test" name= "star" align="center">
+                      <input id="rating-system" type="number" class="rating"
+                      min="0" max="5" step="1"
+                      data-showCaption="true" showClear="false" hoverEnabled="false">
+                      <p id="result" align="center"></p>
+                      <button type="button" id="next">Next</button>
+                    </div>
+                  </form>
                 </div>
                 </div>`);
 
