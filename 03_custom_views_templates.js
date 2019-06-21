@@ -52,7 +52,7 @@ const custom_pragmatics = function(config) {
                 // Now, we will continue with the next view
                 babe.findNextView();
               }
-                // Often it makes sense to also save the config information
+                // Often it makes sense to also save the config information:
                 // trial_data = babeUtils.view.save_config_trial_data(config.data[CT], trial_data);
 
 
