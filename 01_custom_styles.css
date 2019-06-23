@@ -24,3 +24,9 @@
   margin-bottom: 1em;
   line-height:1.2em;
 }
+
+.progress-bar #filled {
+    background-color: #11fc58;
+    display: block;
+    height: 14px;
+}
