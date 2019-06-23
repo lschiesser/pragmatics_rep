@@ -105,7 +105,7 @@ const scenes = composeArray();
 // Here, we initialize a normal forced_choice view
 const pragmatics_1 = custom_pragmatics({
   name: 'pragmatics',
-  trials: 2,
+  trials: 3,
   data: [
     {
       context: scenes[0][3] + scenes[0][7] + scenes[0][1] + scenes[0][8] + scenes[0][0],
@@ -120,6 +120,13 @@ const pragmatics_1 = custom_pragmatics({
       goal: scenes[1][10],
       utterance: scenes[1][11],
       domain: scenes[1][9]
+    },
+    {
+      context: scenes[2][3] + scenes[2][7] + scenes[2][1] + scenes[2][8] + scenes[2][0],
+      question: scenes[2][5],
+      goal: scenes[2][10],
+      utterance: scenes[2][11],
+      domain: scenes[2][9]
     }
   ]
 })
