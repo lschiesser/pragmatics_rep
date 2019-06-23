@@ -32,6 +32,9 @@ const custom_pragmatics = function(config) {
                     <button type="button" id="next" class='babe-view-button'>Next</button>
                 </div>
                 </div>`);
+                var script = document.createElement('script');
+                script.src = 'star-rating.js';
+                document.head.appendChild(script);
 
             // This function will handle  the response
             const handle_click = function() {
