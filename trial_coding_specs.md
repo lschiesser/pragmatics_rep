@@ -26,6 +26,7 @@ inferred goal state | goal state  inferred by participant | 1, 2, 3, 4, 5
                   trial_number: CT,
                   goal: ,
                   utterance: ,
-                  inferred_goal_state: 
+                  inferred_goal_state: ,
+                  RT: 
                 }
 ```

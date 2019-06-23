@@ -1,5 +1,8 @@
 # Replication study: Talking with tact
 [![Netlify Status](https://api.netlify.com/api/v1/badges/17f3cca5-242b-4774-9e0f-f38add0725d8/deploy-status)](https://app.netlify.com/sites/pragmatics-exp/deploys)
+
+[Link to branch deploy](https://ls-test.pragmatics-exp.netlify.com/)
+
 ## Plan
 Due Date | Topic | Assigned to
 -----|------|----
@@ -23,7 +26,7 @@ Task | Assigned to | Due date | Done?
 write welcome text|Caro|20.06.19|:white_check_mark:
 translate questions|Caro|20.06.19|:white_check_mark:
 change text from "Dein/e/er" zu "Der/Die/Das" in prompt generator|Marc|---|✅
-change sentences in polgrice...|Caro|21.06.2019|
+change sentences in polgrice...|Caro|21.06.2019|:white_check_mark:
 
 ## Details for Plan
 - Hypothesis formulation and structure of Experiment
