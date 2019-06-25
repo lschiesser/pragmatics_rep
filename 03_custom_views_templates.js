@@ -15,7 +15,7 @@ const custom_pragmatics = function(config) {
         CT: 0,
         trials: config.trials,
         // The render functions gets the babe object as well as the current trial in view counter as input
-        render: function (CT, babe) {
+        render: function (CT, babe, startingTime) {
             // Here, you can do whatever you want, eventually you should call babe.findNextView()
             // to proceed to the next view and if it is an trial type view,
             // you should save the trial information with babe.trial_data.push(trial_data)
@@ -40,6 +40,7 @@ const custom_pragmatics = function(config) {
             const handle_click = function() {
               if (ValidateStar(document.star)) {
                 console.log(printResult(document.star))
+                const time_spent = Date.now() - startingTime;
                 // We will just save the response and continue to the next view
                 let trial_data = {
                     trial_name: config.name,
@@ -47,7 +48,8 @@ const custom_pragmatics = function(config) {
                     goal: config.data[CT].goal,
                     utterance: config.data[CT].utterance,
                     domain: config.data[CT].domain,
-                    inferred_goal_state: printResult(document.star)
+                    inferred_goal_state: printResult(document.star),
+                    timeSpent: time_spent
                 };
                 // Here, we save the trial_data
                 babe.trial_data.push(trial_data);

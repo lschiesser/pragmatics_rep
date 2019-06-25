@@ -47,7 +47,7 @@ const instructions = babeViews.view_generator("instructions",{
     trials: 1,
     name: 'instrucions',
     title: 'Experimentbeschreibung',
-    text:  `In diesem Experiment werden Ihnen verschiedene hypothetische <b>Szenarien/Gespräche</b> zwischen zwei Personen beschrieben. Ihre Aufgabe wird es sein die <b>Aussagen</b> der Gesprächspartner zu <b>bewerten</b>. In den Szenarien wird beschrieben was die Personen gemacht oder gesagt haben und eine <b>mögliche Interpretation</b> dieses Gesprächs wird Ihnen angeboten. Sie werden dann gebeten zu entscheiden, ob diese Interpretation <b>wahr</b> ist.
+    text:  `In diesem Experiment werden Ihnen verschiedene hypothetische <b>Szenarien/Gespräche</b> zwischen zwei Personen beschrieben. Ihre Aufgabe wird es sein die <b>Aussagen</b> der Gesprächspartner zu <b>bewerten</b>. In den Szenarien wird beschrieben was die Personen gemacht oder gesagt haben und eine <b>mögliche Interpretation</b> dieses Gesprächs wird Ihnen angeboten. Sie werden dann gebeten zu entscheiden, wie wahrscheinlich es ist, dass diese Interpretation <b>wahr</b> ist.
     <br>
     <br>
     Bitte klicken Sie auf "Weiter", um das Experiment zu beginnen.`,
