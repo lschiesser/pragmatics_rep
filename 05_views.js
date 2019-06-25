@@ -23,27 +23,35 @@ const intro = babeViews.view_generator("intro",{
     trials: 1,
     name: 'intro',
     // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-    text:   `This is a sample introduction view.
-            <br />
-            <br />
-            The introduction view welcomes the participant and gives general information
-            about the experiment. You are in the <strong>${coin}</strong> group.
-            <br />
-            <br />
-            This is a minimal experiment with one forced choice view. It can serve as a starting point for programming your own experiment.`,
-   buttonText: 'Begin the experiment'
+    title: 'Willkommen',
+    text:   `Liebe Teilnehmer,
+    <br>
+    Vielen Dank für Ihr Interesse an unserem Experiment. Diesen Versuch führen wir im Rahmen des Kurses "Experimental Psychology Lab" an der Universität Osnabrück durch. Hierbei geht es um die <b>Einschätzung verschiedener Szenarien zwischen zwei Gesprächspartnern</b>.
+    <br>
+    <br>
+    Durch das Klicken des "Experiment beginnen" Button erklären Sie sich bereit freiwillig an unserem Experiment teilzunehmen. Sie können den Versuch jederzeit und ohne Angaben von Gründen abbrechen.
+    Die gesammelten Daten werden nur zu <b>wissenschaftlichen Forschungsgründen</b> gesammelt und <b>anonym</b> behandelt.
+    <br>
+    <br>
+    Die Bearbeitung des Experiments dauert ungefähr <b>15 Minuten</b>. Bitte lesen Sie sich die Aufgaben genau durch.Klicken Sie auf den "Experiment beginnen" Button, um zur Experimentbeschreibung zu gelangen.
+    <br>
+    <br>
+    Wir bedanken uns für Ihre Teilnahme.
+    <br>
+    Bei Fragen kontaktieren Sie uns bitte unter ceckert@uos.de. *(Oder andere Email Adresse)*`,
+   buttonText: 'Experiment beginnen'
 });
 
 // For most tasks, you need instructions views
 const instructions = babeViews.view_generator("instructions",{
     trials: 1,
     name: 'instrucions',
-    title: 'General Instructions',
-    text:  `This is a sample instructions view.
-            <br />
-            <br />
-            Tell your participants what they are to do here.`,
-    buttonText: 'go to trials'
+    title: 'Experimentbeschreibung',
+    text:  `In diesem Experiment werden Ihnen verschiedene hypothetische <b>Szenarien/Gespräche</b> zwischen zwei Personen beschrieben. Ihre Aufgabe wird es sein die <b>Aussagen</b> der Gesprächspartner zu <b>bewerten</b>. In den Szenarien wird beschrieben was die Personen gemacht oder gesagt haben und eine <b>mögliche Interpretation</b> dieses Gesprächs wird Ihnen angeboten. Sie werden dann gebeten zu entscheiden, ob diese Interpretation <b>wahr</b> ist.
+    <br>
+    <br>
+    Bitte klicken Sie auf "Weiter", um das Experiment zu beginnen.`,
+    buttonText: 'Weiter'
 });
 
 
@@ -51,8 +59,8 @@ const instructions = babeViews.view_generator("instructions",{
 const post_test = babeViews.view_generator("post_test",{
     trials: 1,
     name: 'post_test',
-    title: 'Additional information',
-    text: 'Answering the following questions is optional, but your answers will help us analyze our results.',
+    title: 'Weitere Informationen',
+    text: 'Bitte beantworten Sie die folgenden Fragen. Die Beantwortung ist optional, hilft aber bei der Analyse der Ergebnisse',
 
     //You can change much of what appears here, e.g., to present it in a different language, as follows:
     buttonText: 'Weiter',
