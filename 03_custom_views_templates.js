@@ -49,7 +49,7 @@ const custom_pragmatics = function(config) {
                     utterance: config.data[CT].utterance,
                     domain: config.data[CT].domain,
                     inferred_goal_state: printResult(document.star),
-                    timeSpent: time_spent
+                    time_spent: time_spent
                 };
                 // Here, we save the trial_data
                 babe.trial_data.push(trial_data);
