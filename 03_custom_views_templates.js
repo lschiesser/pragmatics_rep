@@ -84,7 +84,7 @@ const custom_pragmatics = function(config) {
             // We will add the handle_click functions to both buttons
             $('#context').html(config.data[CT].context)
             $('#question').html(config.data[CT].question)
-            $('#next').on("click", handle_click);
+            $('#weiter').on("click", handle_click);
 
             // That's everything for this view
         }
