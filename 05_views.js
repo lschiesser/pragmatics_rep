@@ -29,16 +29,16 @@ const intro = babeViews.view_generator("intro",{
     Vielen Dank für Ihr Interesse an unserem Experiment. Diesen Versuch führen wir im Rahmen des Kurses "Experimental Psychology Lab" an der Universität Osnabrück durch. Hierbei geht es um die <b>Einschätzung verschiedener Szenarien zwischen zwei Gesprächspartnern</b>.
     <br>
     <br>
-    Durch das Klicken des "Experiment beginnen" Button erklären Sie sich bereit freiwillig an unserem Experiment teilzunehmen. Sie können den Versuch jederzeit und ohne Angaben von Gründen abbrechen.
-    Die gesammelten Daten werden nur zu <b>wissenschaftlichen Forschungsgründen</b> gesammelt und <b>anonym</b> behandelt.
+    Durch das Klicken des "Experiment beginnen" Button erklären Sie sich bereit, freiwillig an unserem Experiment teilzunehmen. Sie können den Versuch jederzeit und ohne Angaben von Gründen abbrechen.
+    Die gesammelten Daten werden nur zu <b>wissenschaftlichen Forschungszwecken</b> gesammelt und <b>anonym</b> behandelt.
     <br>
     <br>
-    Die Bearbeitung des Experiments dauert ungefähr <b>15 Minuten</b>. Bitte lesen Sie sich die Aufgaben genau durch.Klicken Sie auf den "Experiment beginnen" Button, um zur Experimentbeschreibung zu gelangen.
+    Die Bearbeitung des Experiments dauert ungefähr <b>15 Minuten</b>. Bitte lesen Sie sich die Aufgaben genau durch. Klicken Sie auf den "Experiment beginnen" Button, um zur Experimentbeschreibung zu gelangen.
     <br>
     <br>
     Wir bedanken uns für Ihre Teilnahme.
     <br>
-    Bei Fragen kontaktieren Sie uns bitte unter ceckert@uos.de. *(Oder andere Email Adresse)*`,
+    Bei Fragen kontaktieren Sie uns bitte unter ptsvilodub@uos.de. `,
    buttonText: 'Experiment beginnen'
 });
 
@@ -82,7 +82,7 @@ const post_test = babeViews.view_generator("post_test",{
 const thanks = babeViews.view_generator("thanks", {
     trials: 1,
     name: 'thanks',
-    title: 'Thank you for taking part in this experiment!',
+    title: 'Vielen Dank für Ihre Teilnahme!',
     prolificConfirmText: 'Press the button'
 });
 
@@ -114,6 +114,7 @@ const scenes = composeArray();
 const pragmatics_1 = custom_pragmatics({
   name: 'pragmatics',
   trials: 15,
+  buttonText: 'Weiter',
   data: [
     {
       context: scenes[0][3] + scenes[0][7] + scenes[0][1] + scenes[0][8] + scenes[0][0],
