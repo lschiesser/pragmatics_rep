@@ -37,7 +37,7 @@ const custom_pragmatics = function(config, startingTime) {
                 document.head.appendChild(script);
 
             // This function will handle  the response
-            const handle_click = function() {
+            const handle_click = function(startingTime) {
               if (ValidateStar(document.star)) {
                 console.log(printResult(document.star))
                 const time_spent = Date.now() - startingTime;
