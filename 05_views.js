@@ -114,7 +114,6 @@ const scenes = composeArray();
 const pragmatics_1 = custom_pragmatics({
   name: 'pragmatics',
   trials: 15,
-  buttonText: 'Weiter',
   data: [
     {
       context: scenes[0][3] + scenes[0][7] + scenes[0][1] + scenes[0][8] + scenes[0][0],

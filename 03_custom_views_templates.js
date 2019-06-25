@@ -29,7 +29,7 @@ const custom_pragmatics = function(config) {
                     <input id="rating-system" type="number" class="rating"
                       min="0" max="5" step="1"
                       data-showCaption="true" showClear="false" hoverEnabled="false">
-                    <button type="button" id="next" class='babe-view-button'>Next</button>
+                    <button type="button" id="next" class='babe-view-button'>Weiter</button>
                 </div>
                 </div>`);
                 var script = document.createElement('script');
@@ -84,7 +84,7 @@ const custom_pragmatics = function(config) {
             // We will add the handle_click functions to both buttons
             $('#context').html(config.data[CT].context)
             $('#question').html(config.data[CT].question)
-            $('#weiter').on("click", handle_click);
+            $('#next').on("click", handle_click);
 
             // That's everything for this view
         }
