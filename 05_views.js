@@ -31,7 +31,7 @@ const intro = babeViews.view_generator("intro",{
             <br />
             <br />
             This is a minimal experiment with one forced choice view. It can serve as a starting point for programming your own experiment.`,
-   buttonText: 'Begin the experiment'    
+   buttonText: 'Begin the experiment'
 });
 
 // For most tasks, you need instructions views
@@ -52,22 +52,22 @@ const post_test = babeViews.view_generator("post_test",{
     trials: 1,
     name: 'post_test',
     title: 'Additional information',
-    text: 'Answering the following questions is optional, but your answers will help us analyze our results.'
+    text: 'Answering the following questions is optional, but your answers will help us analyze our results.',
 
-    // You can change much of what appears here, e.g., to present it in a different language, as follows:
-    // buttonText: 'Weiter',
-    // age_question: 'Alter',
-    // gender_question: 'Geschlecht',
-    // gender_male: 'männlich',
-    // gender_female: 'weiblich',
-    // gender_other: 'divers',
-    // edu_question: 'Höchster Bildungsabschluss',
-    // edu_graduated_high_school: 'Abitur',
-    // edu_graduated_college: 'Hochschulabschluss',
-    // edu_higher_degree: 'Universitärer Abschluss',
-    // languages_question: 'Muttersprache',
-    // languages_more: '(in der Regel die Sprache, die Sie als Kind zu Hause gesprochen haben)',
-    // comments_question: 'Weitere Kommentare'
+    //You can change much of what appears here, e.g., to present it in a different language, as follows:
+    buttonText: 'Weiter',
+    age_question: 'Alter',
+    gender_question: 'Geschlecht',
+    gender_male: 'männlich',
+    gender_female: 'weiblich',
+    gender_other: 'divers',
+    edu_question: 'Höchster Bildungsabschluss',
+    edu_graduated_high_school: 'Abitur',
+    edu_graduated_college: 'Hochschulabschluss',
+    edu_higher_degree: 'Universitärer Abschluss',
+    languages_question: 'Muttersprache',
+    languages_more: '(in der Regel die Sprache, die Sie als Kind zu Hause gesprochen haben)',
+    comments_question: 'Weitere Kommentare'
 });
 
 // The 'thanks' view is crucial; never delete it; it submits the results!
@@ -101,19 +101,35 @@ const thanks = babeViews.view_generator("thanks", {
 * https://babe-project.github.io/babe-docs/01_designing_experiments/01_template_views/#trial-views
 */
 
-
+const scenes = composeArray();
 // Here, we initialize a normal forced_choice view
-const forced_choice_2A = babeViews.view_generator("forced_choice", {
-    // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
-    trials: trial_info.forced_choice.length,
-    // name should be identical to the variable name
-    name: 'forced_choice_2A',
-    data: trial_info.forced_choice,
-    // you can add custom functions at different stages through a view's life cycle
-    // hook: {
-    //     after_response_enabled: check_response
-    // }
-});
+const pragmatics_1 = custom_pragmatics({
+  name: 'pragmatics',
+  trials: 3,
+  data: [
+    {
+      context: scenes[0][3] + scenes[0][7] + scenes[0][1] + scenes[0][8] + scenes[0][0],
+      question: scenes[0][5],
+      goal: scenes[0][10],
+      utterance: scenes[0][11],
+      domain: scenes[0][9]
+    },
+    {
+      context: scenes[1][3] + scenes[1][7] + scenes[1][1] + scenes[1][8] + scenes[1][0],
+      question: scenes[1][5],
+      goal: scenes[1][10],
+      utterance: scenes[1][11],
+      domain: scenes[1][9]
+    },
+    {
+      context: scenes[2][3] + scenes[2][7] + scenes[2][1] + scenes[2][8] + scenes[2][0],
+      question: scenes[2][5],
+      goal: scenes[2][10],
+      utterance: scenes[2][11],
+      domain: scenes[2][9]
+    }
+  ]
+})
 
 // There are many more templates available:
 // forced_choice, slider_rating, dropdown_choice, testbox_input, rating_scale, image_selection, sentence_choice,

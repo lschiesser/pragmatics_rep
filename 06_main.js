@@ -17,7 +17,7 @@ $("document").ready(function() {
         views_seq: [
             intro,
             instructions,
-            forced_choice_2A,
+            pragmatics_1,
             post_test,
             thanks,
         ],
@@ -36,7 +36,7 @@ $("document").ready(function() {
         progress_bar: {
             in: [
                 // list the view-names of the views for which you want a progress bar
-                forced_choice_2A.name,
+                pragmatics_1.name,
             ],
              // Possible styles are "default", "separate" and "chunks"
             style: "separate",

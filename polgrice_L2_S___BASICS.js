@@ -1,16 +1,3 @@
-var filename = "EJY_polgrice_goals_v4" 
-var condCounts = "1,5;2,5;" //Example: "1,20;2,20;3,20"
-
-// ---------------- HELPER ------------------
-var NUM_SLIDERS = 3;
-var NUM_SLIDERS1 = 3;
-var NUM_SLIDERS2 = 2;
-
-function showSlide(id) {
-  $(".slide").hide();
-  $("#"+id).show();
-}
-
 function random(a,b) {
   if (typeof b == "undefined") {
     a = a || 2;
@@ -19,69 +6,16 @@ function random(a,b) {
     return Math.floor(Math.random()*(b-a+1)) + a;
   }
 }
-
-function clearForm(oForm) {
-  var sliderVar = "";
-  for(var i=0; i<NUM_SLIDERS; i++)
-  {
-    sliderVar = "#slider" + i;
-    $(sliderVar).slider("value", 20);
-    $(sliderVar).css({"background":"#FFFFFF"});
-    $(sliderVar + " .ui-slider-handle").css({
-        "background":"#FAFAFA",
-        "border-color": "#CCCCCC" });
-    sliderVar = "slider" + i;
-    document.getElementById(sliderVar).style.background = "";
-  }
-  
-  var elements = oForm.elements; 
-  
-  oForm.reset();
-
-  for(var i=0; i<elements.length; i++) {
-    field_type = elements[i].type.toLowerCase();
-    switch(field_type) {
-    
-      case "text": 
-      case "password": 
-      case "textarea":
-            case "hidden":	
-        
-        elements[i].value = ""; 
-        break;
-          
-      case "radio":
-      case "checkbox":
-          if (elements[i].checked) {
-            elements[i].checked = false; 
-        }
-        break;
-  
-      case "select-one":
-      case "select-multi":
-                  elements[i].selectedIndex = -1;
-        break;
-  
-      default: 
-        break;
-    }
-  }
-}
-
-Array.prototype.random = function() {
-  return this[random(this.length)];
-}
-
 // shuffle function
-function shuffle (a) 
-{ 
-    var o = [];    
+function shuffle (a)
+{
+    var o = [];
     for (var i=0; i < a.length; i++) {
 	o[i] = a[i];
-    }    
+    }
     for (var j, x, i = o.length;
 	 i;
-	 j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);	
+	 j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 }
 
@@ -110,78 +44,58 @@ function shuffledSampleArray(arrLength, sampleLength)
   return arr.slice(beginIndex, beginIndex+sampleLength);
 }
 
-function getRadioCheckedValue(formNum, radio_name)
-{
-   var oRadio = document.forms[formNum].elements[radio_name];
-   for(var i = 0; i < oRadio.length; i++)
-   {
-      if(oRadio[i].checked)
-      {
-         return oRadio[i].value;
-      }
-   }
-   return '';
-}
-
-
 // ---------------- PARAMETERS ------------------
 
 // CONDITION ASSIGNMENT
 
-var expt = "polgrice_statePos";
-
-var cond = "statePos"
-
-
 
 var score = shuffle(["nett", "ehrlich", "gemein"]);
-var prediction = shuffle(["ask", "like"])
 
 
 var state_knowledge = "unknown";
 
 
 
-var domains1 = 
+var domains1 =
     shuffle(["Gedicht", "Kuchen", "Kekse", "Vortrag", "Lied", "Film", "Solo", "Monolog", "Stepptanz", "Bild", "App", "Rezension", "Konzert"]);
-var domains2 = 
+var domains2 =
     shuffle(["Gedicht", "Kuchen"]);
 
-//var domains2 = 
+//var domains2 =
 //    shuffle(["Gedicht", "Kuchen", "Kekse", "Vortrag", "Lied", "Film", "Solo", "Monolog", "Stepptanz", "Bild", "App", "Rezension", "Konzert"]);
 var domains = domains1.concat(domains2)
 
-//var states = 
+//var states =
 //    ["furchtbar", "schlecht", "furchtbar", "schlecht", "furchtbar", "schlecht"];
 //
-var states1 = 
+var states1 =
     ["furchtbar", "schlecht", "okay", "gut", "hervorragend"];
-var states2 = 
+var states2 =
     ["schlecht", "okay", "gut", "hervorragend", "furchtbar"];
-var states3 = 
+var states3 =
     ["okay", "gut", "hervorragend", "furchtbar", "schlecht"];
-var states4 = 
+var states4 =
     ["gut", "hervorragend", "furchtbar", "schlecht", "okay"];
-var states5 = 
+var states5 =
     ["hervorragend", "furchtbar", "schlecht", "okay", "gut"];
 var states = states1.concat(states2, states3, states4, states5)
 
-var utterances1 = 
+var utterances1 =
     ["furchtbar", "schlecht", "okay", "gut", "hervorragend"];
-var utterances2 = 
+var utterances2 =
     ["furchtbar", "schlecht", "okay", "gut", "hervorragend"];
-var utterances3 = 
+var utterances3 =
     ["furchtbar", "schlecht", "okay", "gut", "hervorragend"];
 
 var utterances = utterances1.concat(utterances2, utterances3)
 
-var goals = 
+var goals =
     ["nett", "ehrlich", "gemein", "nett", "ehrlich", "gemein", "nett", "ehrlich", "gemein", "nett", "ehrlich", "gemein", "nett", "ehrlich", "gemein"];
 
-    var allConditions = 
+    var allConditions =
 shuffle(
     [
-    
+
 shuffle(
     [
 {"domain": domains[0],
@@ -276,7 +190,7 @@ shuffle(
 },
 
     ])
-]); 
+]);
 
 speakers = shuffle([["Lukas","Leon",], ["Anna", "Hannah"], ["Lea", "Leonie"], ["Tim", "Luka"], ["Fynn", "Jonas"],
                     ["Lena", "Johanna"], ["Jan", "Niklas"], ["Laura", "Sarah"], ["Felix", "Paul"], ["Marie", "Emily"],
@@ -313,10 +227,10 @@ var sents = {
     utterances: {
         furchtbar: {
             sent_utterance: " <b>\"BB war furchtbar.\"</b>"
-        },        
+        },
         schlecht: {
             sent_utterance: " <b>\"BB war schlecht.\"</b>"
-        },        
+        },
         okay: {
             sent_utterance: " <b>\"BB war okay.\"</b>"
         },
@@ -327,7 +241,7 @@ var sents = {
             sent_utterance: " <b>\"BB war hervorragend.\"</b>"
         },
     },
-    
+
     domains: {
        Vortrag: {
             sent_precontext: "Stellen Sie sich vor, dass LS gerade einen Vortrag gehalten hat, ", 
@@ -337,7 +251,7 @@ var sents = {
 	},
 	   Kekse: {
             sent_precontext: "Stellen Sie sich vor, dass LS Kekse gebacken hat, ", 
-            sent_context: " SP hat die Kekse probiert. LS fragt daraufhin SP: \"Wie waren meine Kekse?\"", 
+            sent_context: " SP hat die Kekse probiert. LS fragt daraufhin SP: \"Wie waren meine Kekse?\"",
             BB: "Der Keks",
 			BK: "den Keks",
 	},
@@ -346,7 +260,7 @@ var sents = {
             sent_context: " SP hat das Gedicht gelesen. LS fragt daraufhin SP: \"Wie war mein Gedicht?\"", 
             BB: "Das Gedicht",
 			BK: "das Gedicht",
-	},        
+	},
 	   Kuchen: {
             sent_precontext: "Stellen Sie sich vor, dass LS einen Kuchen gebacken hat, ", 
             sent_context: " SP hat den Kuchen gegessen. LS fragt daraufhin SP: \"Wie war mein Kuchen?\"", 
@@ -367,22 +281,22 @@ var sents = {
 	},
 	   Solo: {
             sent_precontext: "Stellen Sie sich vor, dass LS ein Cello Solo gespielt hat, ", 
-            sent_context: " SP hat das Cello Solo gehört. LS fragt daraufhin SP: \"Wie war mein Cello Solo?\"", 
+            sent_context: " SP hat das Cello Solo gehört. LS fragt daraufhin SP: \"Wie war mein Cello Solo?\"",
             BB: "Das Solo",
 			BK: "das Solo",
-	},        
+	},
 	   Stepptanz: {
             sent_precontext: "Stellen Sie sich vor, dass LS einen Stepptanz aufgefuehrt hat, ", 
             sent_context: " SP hat den Stepptanz Auftritt gesehen. LS fragt daraufhin SP: \"Wie war mein Stepptanz Auftritt?\"", 
             BB: "Der Stepptanz",
 			BK: "den Stepptanz",
-	},   
+	},
 	   Bild: {
             sent_precontext: "Stellen Sie sich vor, dass LS ein Bild gemalt hat, ", 
             sent_context: " SP hat das Bild gesehen. LS fragt daraufhin SP: \"Wie ist mein Bild?\"", 
             BB: "Das Bild",
 			BK: "das Bild",
-	}, 
+	},
 	   Monolog: {
             sent_precontext: "Stellen Sie sich vor, dass LS einen Monolog bei einem Theaterstück vorgetragen hat, ", 
             sent_context: " SP hat den Monolog gehört. LS fragt daraufhin SP: \"Wie war mein Monolog?\"", 
@@ -410,19 +324,19 @@ var sents = {
     },
     states: {
         furchtbar: {
-            state: " <b>everyone thought LS's BB war furchtbar</b>,"        
+            state: " <b>everyone thought LS's BB war furchtbar</b>,"
         },
         schlecht: {
-            state: " <b>everyone thought LS's BB war schlecht</b>,"        
+            state: " <b>everyone thought LS's BB war schlecht</b>,"
         },
         okay: {
-            state: " <b>everyone thought LS's BB war just okay</b>,"        
+            state: " <b>everyone thought LS's BB war just okay</b>,"
         },
         gut: {
-            state: " <b>everyone thought LS's BB war gut</b>,"        
+            state: " <b>everyone thought LS's BB war gut</b>,"
         },
         hervorragend: {
-            state: " <b>everyone thought LS's BB war hervorragend</b>,"        
+            state: " <b>everyone thought LS's BB war hervorragend</b>,"
         },
     },
     goals: {
@@ -430,11 +344,11 @@ var sents = {
             goal: " <b>SP möchte nett sein und antwortet: "
         },
         ehrlich: {
-            goal: " <b>SP möchte ehrlich sein und antwortet: "            
+            goal: " <b>SP möchte ehrlich sein und antwortet: "
         },
         gemein: {
-            goal: " <b>SP möchte gemein sein und antwortet: "            
-        }  
+            goal: " <b>SP möchte gemein sein und antwortet: "
+        }
     },
     people: {
         people1: {
@@ -552,29 +466,29 @@ function doSentSubs (sents, polite, domain, utterance, people, goal)
     } else if (state_knowledge == "unknown") {
         knowledge = " aber nicht weiß wie andere Leute darüber denken."
     }
-    
+
     question = "Based on what SP said, how likely do you think that <b>SP's goal</b> was to be:";
-    
+
 
     question2 = "Was denken Sie: Wie denkt SP <b>wirklich</b> über BK von LS?";
     question3 = "Based on what SP said, how likely is it for you to <b>like SP</b>?";
-   
+
     BB = sents["domains"][domain]["BB"]; //Item 2
 	BK = sents["domains"][domain]["BK"]; //Item 2
     SP = sents["people"][people]["SP"]; //speaker
     LS = sents["people"][people]["LS"]; //addressee
- 
+
     utterance = utterance.replace("BB",BB).replace("SP",SP).replace("LS",LS);
     context = context.replace("BB",BB).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);
     precontext = precontext.replace("BB",BB).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);
     state = state.replace("BB",BB).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);
-    question = question.replace("BB",BB).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);   
-    question2 = question2.replace("BK",BK).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);   
-    question3 = question3.replace("BB",BB).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);   
-    knowledge = knowledge.replace("BB",BB).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);   
-    goal = goal.replace("BB",BB).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);   
+    question = question.replace("BB",BB).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);
+    question2 = question2.replace("BK",BK).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);
+    question3 = question3.replace("BB",BB).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);
+    knowledge = knowledge.replace("BB",BB).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);
+    goal = goal.replace("BB",BB).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("SP",SP).replace("LS",LS).replace("LS",LS).replace("LS",LS);
 
-    
+
     return [utterance, context, state, precontext, question, question2, question3, knowledge, goal];
 }
 
@@ -588,195 +502,32 @@ var trial;
 var numComplete = 0;
 var buyer;
 
-showSlide("instructions");
-$("#trial-num").html(numComplete);
-$("#total-num").html(numTrials);
-
-
-var experiment = {
-    
-    data: {
-    expt: expt,
-
-    order: [],
-    knowledge: state_knowledge,
-    domain: [],
-
-    utterance: [],
-    people: [],
-    goal: [],
-
-    judgment: [],
-
-    language: [],
-	expt_aim: [],
-	goal_thoughts: [],
-	expt_gen: [],
-    numTrials: numTrials
-    },
-    
-  end: function() {	
-    experiment.data.language.push(document.getElementById("homelang").value);
-	experiment.data.expt_aim.push(document.getElementById("expthoughts").value);
-	experiment.data.goal_thoughts.push(document.getElementById("goal_thoughts").value);
-	experiment.data.expt_gen.push(document.getElementById("expcomments").value);
-    showSlide("finished");
-      
-      
-    setTimeout(function() {turk.submit(experiment.data) }, 1500);
-  },
-    
-  next: function() {
-    // Allow experiment to start if it's a turk worker OR if it's a test run
-	if (window.self == window.top | turk.workerId.length > 0) {
-
-    if (numComplete > 0) {
-
-      var prob0 = parseInt(document.getElementById("hiddenSliderValue0").value) / 40.00;
-      var prob1 = parseInt(document.getElementById("hiddenSliderValue1").value) / 40.00;
-      var prob2 = parseInt(document.getElementById("hiddenSliderValue2").value) / 40.00;  
-      var judgment = $(".rating-stars").attr("style");
-      judgment = parseInt(judgment.replace(/[^\d.]/g, ''));
-
-        
-      experiment.data.order.push(numComplete);
-      experiment.data.utterance.push(trial.utterance);
-      experiment.data.domain.push(trial.domain);
-
-      experiment.data.goal.push(goal);
-      experiment.data.judgment.push(judgment);
-      
-      clearForm(document.forms[0]);
-      clearForm(document.forms[1]);
-
-      //Clear stars
-      $(".rating-stars").attr({"style":"width: 0%"});
-        
-    }
-    if (numComplete >= numTrials) {
-    	$('.bar').css('width', (200.0 * numComplete/numTrials) + 'px');
-    	$("#trial-num").html(numComplete);
-    	$("#total-num").html(numTrials);
-    	showSlide("askInfo");
-    } else {
-    	$('.bar').css('width', (200.0 * numComplete/numTrials) + 'px');
-    	$("#trial-num").html(numComplete);
-    	$("#total-num").html(numTrials);
-    	currentTrialNum = numComplete;
-    	trial = allTrialOrders[shuffledOrder[numComplete]];
-        utterance = trial.utterance;
-        state = trial.state;
-        domain = trial.domain;
-        context = trial.context;
-        people = trial.people;
-        goal = trial.goal;
-        sent_materials = doSentSubs(sents, state, domain, utterance, people, goal);
-      showSlide("stage");
-      $("#context").html(sent_materials[3] + sent_materials[7] + sent_materials[1] + sent_materials[8] + sent_materials[0]);  
-      $("#question").html(sent_materials[4]); 
-      $("#rating-stars").on("click", 
-			    	function(event) {
-						var selection = $("#rating-stars").val();
-			});
-        
-      
-      for (var i = 0; i <= 4; i++)
-      {         
-        $("#score" + 10*i).html(score[i]);
-      }
-      $("#question2").html(sent_materials[5]);    
-      $("#question3").html(sent_materials[6]);    
-      numComplete++;      
-    }}
+function composeArray () {
+  var scenes = [];
+  while (scenes.length < 15) {
+    currentTrialNum = numComplete;
+    console.log(numComplete);
+    trial = allTrialOrders[shuffledOrder[numComplete]];
+    console.log(trial);
+    utterance = trial.utterance;
+    state = trial.state;
+    domain = trial.domain;
+    context = trial.context;
+    people = trial.people;
+    goal = trial.goal;
+    console.log(domain);
+    sent_materials = doSentSubs(sents, state, domain, utterance, people, goal);
+    sent_materials.push(domain);
+    sent_materials.push(goal);
+    sent_materials.push(utterance);
+    console.log(sent_materials);
+    //context = sent_materials[3] + sent_materials[7] + sent_materials[1] + sent_materials[8] + sent_materials[0];
+    //console.log(context);
+    //console.log(sent_materials[5]);
+    //$("#context").html(sent_materials[3] + sent_materials[7] + sent_materials[1] + sent_materials[8] + sent_materials[0]);
+    //$("#question").html(sent_materials[5]);
+    scenes.push(sent_materials);
+    numComplete++;
   }
+  return scenes;
 }
-
-// scripts for sliders
-$("#slider0").slider({
-               animate: true,
-               orientation: "vertical",
-               max: 40 , min: 0, step: 1, value: 20,
-               slide: function( event, ui ) {
-                   $("#slider0 .ui-slider-handle").css({
-                      "background":"#E0F5FF",
-                      "border-color": "#001F29"
-                   });
-               },
-               change: function( event, ui ) {
-                   $('#hiddenSliderValue0').attr('value', ui.value);
-                   $("#slider0").css({"background":"#99D6EB"});
-                   $("#slider0 .ui-slider-handle").css({
-                     "background":"#667D94",
-                     "border-color": "#001F29" });
-               }});
-$("#slider1").slider({
-               animate: true,
-               orientation: "vertical",
-               max: 40 , min: 0, step: 1, value: 20,
-               slide: function( event, ui ) {
-                   $("#slider1 .ui-slider-handle").css({
-                      "background":"#E0F5FF",
-                      "border-color": "#001F29"
-                   });
-               },
-               change: function( event, ui ) {
-                   $('#hiddenSliderValue1').attr('value', ui.value);
-                   $("#slider1").css({"background":"#99D6EB"});
-                   $("#slider1 .ui-slider-handle").css({
-                     "background":"#667D94",
-                     "border-color": "#001F29" });
-               }});
-$("#slider2").slider({
-               animate: true,
-               orientation: "vertical",
-               max: 40 , min: 0, step: 1, value: 20,
-               slide: function( event, ui ) {
-                   $("#slider2 .ui-slider-handle").css({
-                      "background":"#E0F5FF",
-                      "border-color": "#001F29"
-                   });
-               },
-               change: function( event, ui ) {
-                   $('#hiddenSliderValue2').attr('value', ui.value);
-                   $("#slider2").css({"background":"#99D6EB"});
-                   $("#slider2 .ui-slider-handle").css({
-                     "background":"#667D94",
-                     "border-color": "#001F29" });
-               }});
-
-
-$("#slider3").slider({
-               animate: true,
-               max: 40 , min: 0, step: 1, value: 20,
-               slide: function( event, ui ) {
-                   $("#slider3 .ui-slider-handle").css({
-                      "background":"#E0F5FF",
-                      "border-color": "#001F29"
-                   });
-               },
-               change: function( event, ui ) {
-                   $('#hiddenSliderValue3').attr('value', ui.value);
-                   $("#slider3").css({"background":"#99D6EB"});
-                   $("#slider3 .ui-slider-handle").css({
-                     "background":"#667D94",
-                     "border-color": "#001F29" });
-               }});
-
-$("#slider4").slider({
-               animate: true,
-               max: 40 , min: 0, step: 1, value: 20,
-               slide: function( event, ui ) {
-                   $("#slider4 .ui-slider-handle").css({
-                      "background":"#E0F5FF",
-                      "border-color": "#001F29"
-                   });
-               },
-               change: function( event, ui ) {
-                   $('#hiddenSliderValue4').attr('value', ui.value);
-                   $("#slider4").css({"background":"#99D6EB"});
-                   $("#slider4 .ui-slider-handle").css({
-                     "background":"#667D94",
-                     "border-color": "#001F29" });
-               }});
-
-

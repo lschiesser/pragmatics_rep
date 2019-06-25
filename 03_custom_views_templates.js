@@ -27,36 +27,42 @@ const custom_pragmatics = function(config) {
                 <p id = "question" class="block-text"></p>
                 <div id="test" name= "star" align="center">
                     <input id="rating-system" type="number" class="rating"
-                           min="0" max="5" step="1"
-                           data-showCaption="true" showClear="false" hoverEnabled="false">
-                    <button id="next" class='babe-view-button'>Next</button>
+                      min="0" max="5" step="1"
+                      data-showCaption="true" showClear="false" hoverEnabled="false">
+                    <button type="button" id="next" class='babe-view-button'>Next</button>
                 </div>
                 </div>`);
+                var script = document.createElement('script');
+                script.src = 'star-rating.js';
+                document.head.appendChild(script);
 
             // This function will handle  the response
-            const handle_click = function(star) {
-              if (ValidateStar(star)) {
-                console.log(printResult(star))
+            const handle_click = function() {
+              if (ValidateStar(document.star)) {
+                console.log(printResult(document.star))
                 // We will just save the response and continue to the next view
                 let trial_data = {
                     trial_name: config.name,
                     trial_number: CT,
                     goal: config.data[CT].goal,
                     utterance: config.data[CT].utterance,
+                    domain: config.data[CT].domain,
                     inferred_goal_state: printResult(document.star)
                 };
-              }
-                // Often it makes sense to also save the config information
-                // trial_data = babeUtils.view.save_config_trial_data(config.data[CT], trial_data);
-
                 // Here, we save the trial_data
                 babe.trial_data.push(trial_data);
 
                 // Now, we will continue with the next view
                 babe.findNextView();
+              }
+                // Often it makes sense to also save the config information:
+                // trial_data = babeUtils.view.save_config_trial_data(config.data[CT], trial_data);
+
+
             };
             const ValidateStar = function(form) {
               var judgment = $(".rating-stars").attr("style");
+              console.log("judgment: ", judgment);
               judgment = parseInt(judgment.replace(/[^\d.]/g, ''));
               console.log("judgment: ", judgment); //for debuggging
               if (judgment == 0) {
@@ -77,7 +83,7 @@ const custom_pragmatics = function(config) {
 
             // We will add the handle_click functions to both buttons
             $('#context').html(config.data[CT].context)
-            $('#question').html(config.data[CT.question)
+            $('#question').html(config.data[CT].question)
             $('#next').on("click", handle_click);
 
             // That's everything for this view
