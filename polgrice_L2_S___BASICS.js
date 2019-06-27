@@ -252,8 +252,8 @@ var sents = {
 	   Kekse: {
             sent_precontext: "Stellen Sie sich vor, dass LS Kekse gebacken hat, ",
             sent_context: " SP hat die Kekse probiert. LS fragt daraufhin SP: \"Wie waren meine Kekse?\"",
-            BB: "Die Kekse",
-			BK: "die Kekse",
+            BB: "Der Keks",
+			BK: "den Keks",
 	},
 	   Gedicht: {
             sent_precontext: "Stellen Sie sich vor, dass LS ein Gedicht geschrieben hat, ",
