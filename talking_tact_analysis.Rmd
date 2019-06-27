@@ -43,19 +43,19 @@ glimpse(d)
 
 Select the data of interest: certain columns. Set the data types. Look at the data frame. 
 We *do not* need all the additional info like age etc. 
-We *need*: native languages, goal, utterance, *rating*(=inferred state), submission ID, item (scenario), time spent (for removing outliers)  
+We *need*: native languages, goal, utterance, *rating*(=inferred state), submission ID, item (domain), time spent (for removing outliers)  
 
 ``` {r}
 d <- select(d, c(trial_number, domain, goal, utterance, inferred_goal_state, languages))
-# set data types: RT is int, goal & rating (?) & utterance should be factors
+# set data types: RT is int, goal & utterance should be factors
 # utterance is a predictor which is scaled orinally! 
-# factor utterance assigns the ordered levels to the diefferent utterances 
+# factor utterance assigns the ordered levels to the different utterances 
 d <- mutate(d, goal = factor(goal), utterance = factor(utterance, levels=c("furchtbar", "schlecht", "okay", "gut", "hervorragend"), ordered=T), inferred_state = inferred_goal_state)
 View(d)
 ```
 Plot the data grouped by goals (nice, honest, mean) vs inferred state.
 ```{r}
-# plots the dots , is  not very insightful
+# plots the dots which is  not very insightful
 ggplot(d, aes(x=utterance, y=inferred_state, color=goal)) + geom_point()
 ```
 Remove outliers: exclude participants where German was not a native language, and time spent was too long (2 minutes?)
@@ -63,25 +63,27 @@ Remove outliers: exclude participants where German was not a native language, an
 Show means for each design cell: goal x utterance. 
 ```{r}
 library(Rmisc)
+# reaction times could not be coded yet
 #d <- filter(d, timeSpent <= 120000)
-#excludes too many fore some reason
+#exclude non-native speakers
 d <- filter(d, grepl("Deutsch", languages, ignore.case = T ))
 
-# can we just use mean(rating), although it is an ordinally scaled parameter?
+# calculate the means of the inferred states dependent on goal and utterance 
 dmeans <- d %>% group_by(goal, utterance) %>% summarize(inferred_state=mean(inferred_state)) 
+# this is used because it gives us the 95% confidence interval as plotted in the original paper 
 dm<- summarySE(d, measurevar = "inferred_state", groupvars = c("goal", "utterance"))
 # plot graph 1 of the original paper Fig 3 .  
 ggplot(dm, aes(x=utterance, y=inferred_state, color=goal)) + geom_point()+geom_line(aes(group=goal), size=0.5)+geom_errorbar(aes(ymin=inferred_state-ci, ymax=inferred_state+ci))
 
 ```
-Fit the model: bayesian fixed-effects model for ordinal scale 
+Fit the model: bayesian model with monotonic effects
 ```{r}
 model1 <- brm(inferred_state ~ mo(utterance)+goal+mo(utterance)*goal, d)
 summary(model1)
 marginal_effects(model1, "utterance:goal")
 
 ```
-Check hypotheses:
+# Check hypotheses:
 - Draw posterior samples
 - Inferred states for honest condition are higher than inferred states for nice condition for positive utterances
 - Inferred states for nice condition are higher than inferred states for mean consition for positive utterances
@@ -90,7 +92,7 @@ Check hypotheses:
 ``` {r}
 # posterior samples
 post_samples <- posterior_samples(model1)%>% as_tibble
-# Inferred states for honest condition are higher than inferred states for #nice condition for positive utterances
+
 post_ehrlich_hervor <- post_samples$b_Intercept+post_samples$`simo_moutterance1[4]`
 post_nett_hervor <- post_samples$b_Intercept+post_samples$b_goalnett+post_samples$`simo_moutterance:goalnett1[4]`
 post_gemein_hervor <- post_samples$b_Intercept + post_samples$b_goalgemein + post_samples$`simo_moutterance:goalgemein1[4]`
@@ -108,6 +110,20 @@ Check same hypotheses
 ```{r}
 model2 <- brm(inferred_state ~ mo(utterance)+goal+mo(utterance)*goal+(1|domain), d)
 summary(model2)
+
+# check same hypotheses
+post_samples2 <- posterior_samples(model2)%>% as_tibble
+
+post_ehrlich_hervor2 <- post_samples2$b_Intercept+post_samples2$`simo_moutterance1[4]`
+post_nett_hervor2 <- post_samples2$b_Intercept+post_samples2$b_goalnett+post_samples2$`simo_moutterance:goalnett1[4]`
+post_gemein_hervor2 <- post_samples2$b_Intercept + post_samples2$b_goalgemein + post_samples2$`simo_moutterance:goalgemein1[4]`
+post_ehrlich_schr2 <- post_samples2$b_Intercept+post_samples2$`simo_moutterance1[1]`
+post_nett_schr2 <- post_samples2$b_Intercept + post_samples2$b_goalnett + post_samples2$`simo_moutterance1[1]`
+post_gemein_schr2 <- post_samples2$b_Intercept+post_samples2$b_goalgemein+post_samples2$`simo_moutterance:goalgemein1[1]`
+
+mean(mean(post_ehrlich_hervor2)>mean(post_nett_hervor2))
+mean(mean(post_nett_hervor2)>mean(post_gemein_hervor2))
+mean(mean(post_ehrlich_schr2)==mean(post_nett_schr2))
+mean(mean(post_ehrlich_schr2)<mean(post_gemein_schr2))
 ```
 
-#Conclusion 
