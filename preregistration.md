@@ -1,7 +1,7 @@
 # Background
 
 - indicate the theoretical background of your study
-    - basis study to state inferences/influence of Du/Sie in German (politeness)
+    - basis study to investigate the influence of du/Sie in German on inferences (politeness)
     - original study was used to create a model, which predicts how key words influence people's perception of politeness
 - why is this interesting? where are your research questions coming from
     - interested in cross-linguistic comparisons and studies
