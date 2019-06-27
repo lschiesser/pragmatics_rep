@@ -73,8 +73,6 @@ const post_test = babeViews.view_generator("post_test",{
     gender_female: 'weiblich',
     gender_other: 'divers',
     edu_question: 'Höchster Bildungsabschluss',
-    edu_graduated_hauptschule: 'Hauptschulabschluss',
-    edu_graduated_realschule: 'Mittlere Reife',
     edu_graduated_high_school: 'Abitur',
     edu_graduated_college: 'Hochschulabschluss',
     edu_higher_degree: 'Universitärer Abschluss',
