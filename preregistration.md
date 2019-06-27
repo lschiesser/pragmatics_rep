@@ -42,7 +42,7 @@
 - what materials will you be using? how where they produced
     - Answer: the original experiment, star rating plugin, we translated the sentences ourselves
 - you could include a link to the material if it is available online
-    - Answer: https://www.jqueryscript.net/other/Simple-jQuery-Star-Rating-System-For-Bootstrap-3.html, http://langcog.stanford.edu/expts/EJY/polgrice/L2_S/
+    - Answer: https://www.jqueryscript.net/other/Simple-jQuery-Star-Rating-System-For-Bootstrap-3.html, langcog.stanford.edu/expts/EJY/polgrice/L2_S/polgrice_L2_S.html
 
 ## Procedure
 
