@@ -47,13 +47,13 @@ const instructions = babeViews.view_generator("instructions",{
     trials: 1,
     name: 'instrucions',
     title: 'Experimentbeschreibung',
-    text:  `In diesem Experiment werden Ihnen verschiedene hypothetische <b>Szenarien/Gespräche</b> zwischen zwei Personen beschrieben. Ihre Aufgabe wird es sein die <b>Aussagen</b> der Gesprächspartner zu <b>bewerten</b>. In den Szenarien wird beschrieben was die Personen gemacht oder gesagt haben und eine <b>mögliche Interpretation</b> dieses Gesprächs wird Ihnen angeboten. <b>Sie werden gebeten, die Interpretationen zu evaluieren.</b> Dabei befindet sich auf der Bewertungsskala bei 1 die schlechteste, bei 5 die betste Bewertung.
+    text:  `In diesem Experiment werden Ihnen verschiedene hypothetische <b>Szenarien/Gespräche</b> zwischen zwei Personen beschrieben. Ihre Aufgabe wird es sein die <b>Aussagen</b> der Gesprächspartner zu <b>bewerten</b>. In den Szenarien wird beschrieben was die Personen gemacht oder gesagt haben und eine <b>mögliche Interpretation</b> dieses Gesprächs wird Ihnen angeboten. Sie werden dann gebeten zu entscheiden, wie wahrscheinlich es ist, dass diese Interpretation <b>wahr</b> ist.
     <br>
     <br>
     Bitte klicken Sie auf "Weiter", um das Experiment zu beginnen.`,
     buttonText: 'Weiter'
 });
-//
+// Sie werden gebeten zu entscheiden, die Interpretationen zu evaluieren. Dabei befindet sich auf der Bewertungsskala bei 1 die schlechteste, bei 5 die betste Bewertung. 
 
 
 // In the post test questionnaire you can ask your participants addtional questions
