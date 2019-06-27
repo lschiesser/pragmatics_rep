@@ -33,7 +33,7 @@
 ## Sampling plan
 
 - how many participants will you recruit, and how, where, when?
-    - Answer: 30, Coxi mailing list + course participants, after prereg report has been approved (end of july)
+    - Answer: around 30, Coxi mailing list + course participants, after prereg report has been approved (end of july)
 - any special restriction as to who qualifies?
     - Answer: native german speakers only
 
@@ -49,8 +49,9 @@
 - describe the experiment here pretty much like you would in a research article without space constraints
     - similar to the statement in the Mental Rotation Task description, but possibly already in full prose
 - **Answer:** 
-- Instructions: The participants are presented with written instructions on how the experiment will look like and what their task will be. Here they also state, that their participation is voluntary and they are informed how we will process the data. **Screenshot of scenario and rating scale?**
-- We decided not to include a practice phase, because it was also not part of the original study.
+- Instructions: 
+    - The participants are presented with written instructions on how the experiment will look like and what their task will be. Here they also state, that their participation is voluntary and they are informed how we will process the data. **Screenshot of scenario and rating scale?**
+    - We decided not to include a practice phase, because it was also not part of the original study.
 - Main test phase:
     - Trial sequence: The trials start with the presentation of the scenario and underneath the participant sees the rating scale consisting of 5 hearts. Participants are asked to rate a total of 15 scenarios using the rating scale.
 - what is the structure of the experiment?
@@ -64,7 +65,7 @@
 
 - based on the design you described, what are the variables that you are going to measure?
 - how will they be measured in the experiment?
-- Answer: via the heart rating scale
+    - Answer: via the heart rating scale
 - how will they be treated (e.g., rating scale data will be treated as an ordinal variable; or: XYZ is a factor with 2 levels (A and B) where A is the reference level in dummy coding)
 
 
@@ -74,9 +75,9 @@
 
 - what are the criteria based on which you would exclude data from the analysis
 - for single trial data
-- Answer: took longer than XXX
+    - Answer: took longer than XXX
 - for data from a whole participant
-- Answer: no native speaker, took longer than XXX
+    - Answer: no native speaker, took longer than XXX
 - ...
 
 ## Confirmatory hypothesis testing
