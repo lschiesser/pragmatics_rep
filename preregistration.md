@@ -53,7 +53,8 @@ The participants are presented with written instructions on how the experiment w
 <br>
 The instruction text is the following:
 <br>
-**Willkommen**
+<br>
+_**Willkommen**
 <br>
 <br>
 Liebe Teilnehmer,
@@ -68,18 +69,18 @@ Die Bearbeitung des Experiments dauert ungefähr 15 Minuten. Bitte lesen Sie sic
 <br>
 Wir bedanken uns für Ihre Teilnahme.
 <br>
-Bei Fragen kontaktieren Sie uns bitte unter ptsvilodub@uos.de.
+Bei Fragen kontaktieren Sie uns bitte unter ptsvilodub@uos.de._
 <br>
 <br>
 Afterwards the participants get the concrete instructions on how to do the experiment:
 <br>
 <br>
-**Experimentbeschreibung**
+_**Experimentbeschreibung**
 <br>
 In diesem Experiment werden Ihnen verschiedene hypothetische Szenarien/Gespräche zwischen zwei Personen beschrieben. Ihre Aufgabe wird es sein die Aussagen der Gesprächspartner zu bewerten. In den Szenarien wird beschrieben was die Personen gemacht oder gesagt haben und eine mögliche Interpretation dieses Gesprächs wird Ihnen angeboten. Sie werden gebeten, die Interpretationen zu evaluieren. Dabei befindet sich auf der Bewertungsskala bei 1 die schlechteste, bei 5 die beste Bewertung. 
 <br>
 <br>
-Bitte klicken Sie auf "Weiter", um das Experiment zu beginnen.
+Bitte klicken Sie auf "Weiter", um das Experiment zu beginnen._
 
 ### Main test phase
 
