@@ -1,6 +1,6 @@
 # Background
 
-The theoretical background of our experiment is the assumption that politeness violates basic communicative maxims of quality, yet it is an omnispresent phenomenon in human communication. The authors of the original paper hypothesize that polite utterances result from a trade-off between informativity and social values. The original study was used to create and validate a model, which predicts how communicative goals influence people's perception of utterances evaluating a performance.
+The theoretical background of our experiment is the assumption that politeness violates basic communicative maxims of quality, yet it is an omnipresent phenomenon in human communication. The authors of the original paper hypothesize that polite utterances result from a trade-off between informativity and social values. The original study was used to create and validate a model, which predicts how communicative goals influence people's perception of utterances evaluating a performance.
 <br>
 We chose this study, because we are interested in cross-linguistic comparisons and studies. Also our results will serve as a basis study to state the influence of the politeness markers "du" and "Sie" in German on the inferences. Because in German there are these politeness markers, like "Sie" our intuition is the interpretation will differ depending on the use of "du" versus "Sie".
 <br>
@@ -77,7 +77,7 @@ Afterwards the participants get the concrete instructions on how to do the exper
 <br>
 _**Experimentbeschreibung**
 <br>
-In diesem Experiment werden Ihnen verschiedene hypothetische Szenarien/Gespräche zwischen zwei Personen beschrieben. Ihre Aufgabe wird es sein die Aussagen der Gesprächspartner zu bewerten. In den Szenarien wird beschrieben was die Personen gemacht oder gesagt haben und eine mögliche Interpretation dieses Gesprächs wird Ihnen angeboten. Sie werden gebeten, die Interpretationen zu evaluieren. Dabei befindet sich auf der Bewertungsskala bei 1 die schlechteste, bei 5 die beste Bewertung. 
+In diesem Experiment werden Ihnen verschiedene hypothetische Szenarien/Gespräche zwischen zwei Personen beschrieben. Ihre Aufgabe wird es sein die Aussagen der Gesprächspartner zu bewerten. In den Szenarien wird beschrieben was die Personen gemacht oder gesagt haben und eine mögliche Interpretation dieses Gesprächs wird Ihnen angeboten. Sie werden gebeten, die Interpretationen zu evaluieren. Dabei befindet sich auf der Bewertungsskala bei 1 die schlechteste, bei 5 die beste Bewertung.
 <br>
 <br>
 Bitte klicken Sie auf "Weiter", um das Experiment zu beginnen._
@@ -94,7 +94,7 @@ We decided not to include practive trials, because it was not part of the origin
 ### Trials
 We only have the main trials, which are a rating task. The results of these main trials will then be used for our analysis.
 <br>
-We decided not to include practive trials, because it was not part of the original study and we still wanted to replicate it as closely as possible.
+We decided not to include practice trials, because it was not part of the original study and we still wanted to replicate it as closely as possible.
 <br>
 The trials are structured in the way that participants are presented with a randomized scenario and the heart rating scale (one to five hearts). The participants then answer the question using the five-heart rating scale.
 
@@ -109,7 +109,7 @@ The goal will be treated as a factor, the utterance as an ordered factor (monoto
 
 ## Exclusion criteria
 
-In the analysis for single trial data we will exclude all trials, in which the participants took longer than 2 minutes to answer the question. 
+In the analysis for single trial data we will exclude all trials, in which the participants took longer than 2 minutes to answer the question.
 <br>
 From a whole participant we will exclude all non native German speakers.
 
@@ -117,10 +117,10 @@ From a whole participant we will exclude all non native German speakers.
 
 The utterances will be transformed into an ordered factor using mo().
 <br>
-For the statistical model we will use the "brms" package to run a Baysian regression model, regressing the inferred state against goal, utterance and their interactions. We will also try  a model with random by-domain effects and compare the fit. Further we will consider the differences within the intervals between the utterance.
+For the statistical model we will use the "brms" package to run a Bayesian regression model, regressing the inferred state against goal, utterance and their interactions. We will also try  a model with random by-domain effects and compare the fit. Further we will consider the differences within the intervals between the utterance.
 <br>
 <br>
-For positive utterances, i.e. if hypothesis 1 is true, we expect the inferred state for honest utterances to be credibly higher that the inferred state for nice utterances in the posterior distribution. 
+For positive utterances, i.e. if hypothesis 1 is true, we expect the inferred state for honest utterances to be credibly higher that the inferred state for nice utterances in the posterior distribution.
 <br>
 If H1 is true, we expect the inferred state for nice utterances to be credibly higher than the inferred state for mean utterances in the posterior distribution.
 <br>
