@@ -18,6 +18,14 @@
 - give them recognizable names if there are several or number them (like H1, H2 etc.)
 - you will restate these research questions more clearly after you have specified the design (see below)
 - Answer:
+
+---|schrecklich|schlecht|okay|gut|hervorragend|Effect Goal
+---|----------|------|------|---|-----|---
+Ehrlich|inferred_ehr_schr|inferred_ehr_schl|inferred_ehr_ok|inferred_ehr_gut|inferred_ehr_herv|inferred_ehr
+Nett|inferred_nett_schr|inferred_nett_schl|inferred_nett_ok|inferred_nett_gut|inferred_nett_herv|inferred_nett
+Gemein|inferred_gem_schr|inferred_gem_schl|inferred_gem_ok|inferred_gem_gut|inferred_gem_herv|inferred_gem
+Effect Utt|inferred_schr|inferred_schl|inferred_ok|inferred_gut|inferred_herv
+
 1. hypothesis 1: positive utterances:
     - mean(nice_inferred) < mean (honest_inferred)
     - mean(nice_inferred) > mean(mean_inferred)
@@ -95,7 +103,7 @@
 - describe your statistical model
   - we will use the 'brms' package to run a Bayesian regression model regressing the inferred state against goal, utterance and their interactions
   - we will also try a model with random by-domain effects and compare the fit
-  - we will consider the differences within the intervals between the utterance 
+  - we will consider the differences within the intervals between the utterance
 - describe by what means you will test the hypotheses mentioned earlier
 - when you do this you will want to reformulate the hypotheses in a more precise fashion
   - for positive utterances, if H1 is true, we expect the inferred state for honest utterances to be credibly higher that the inferred state for nice utterances in the posterior distribution
