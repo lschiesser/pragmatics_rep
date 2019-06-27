@@ -53,6 +53,7 @@ const instructions = babeViews.view_generator("instructions",{
     Bitte klicken Sie auf "Weiter", um das Experiment zu beginnen.`,
     buttonText: 'Weiter'
 });
+// Sie werden gebeten zu entscheiden, die Interpretationen zu evaluieren. Dabei befindet sich auf der Bewertungsskala bei 1 die schlechteste, bei 5 die betste Bewertung. 
 
 
 // In the post test questionnaire you can ask your participants addtional questions
