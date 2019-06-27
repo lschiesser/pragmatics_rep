@@ -25,7 +25,6 @@ const intro = babeViews.view_generator("intro",{
     // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
     title: 'Willkommen',
     text:   `Liebe Teilnehmer,
-    <p class="justify">
     <br>
     Vielen Dank für Ihr Interesse an unserem Experiment. Diesen Versuch führen wir im Rahmen des Kurses "Experimental Psychology Lab" an der Universität Osnabrück durch. Hierbei geht es um die <b>Einschätzung verschiedener Szenarien zwischen zwei Gesprächspartnern</b>.
     <br>
@@ -39,8 +38,7 @@ const intro = babeViews.view_generator("intro",{
     <br>
     Wir bedanken uns für Ihre Teilnahme.
     <br>
-    Bei Fragen kontaktieren Sie uns bitte unter ptsvilodub@uos.de. `
-    </p>,
+    Bei Fragen kontaktieren Sie uns bitte unter ptsvilodub@uos.de. `,
    buttonText: 'Experiment beginnen'
 });
 
