@@ -74,11 +74,10 @@
 - how will they be treated (e.g., rating scale data will be treated as an ordinal variable; or: XYZ is a factor with 2 levels (A and B) where A is the reference level in dummy coding)
     - goal is factor
     - utterance is an ordered factor (monotonic predictor)
-    - rating/inferred state as ordinal variable
+    - rating/inferred state as int such that the mean can be calculated
 
 
 # Analysis Plan
--
 
 ## Exclusion criteria
 
@@ -92,8 +91,14 @@
 ## Confirmatory hypothesis testing
 
 - if applicable, describe any transformations that you might want to apply to the data
+  - utterances are transformed into an ordered factor using mo()
 - describe your statistical model
-  - e.g., we will use the 'brms' package to run a Bayesian regression model regressing XYZ against A, B and C and their interactions
+  - we will use the 'brms' package to run a Bayesian regression model regressing the inferred state against goal, utterance and their interactions
+  - we will also try a model with random by-domain effects and compare the fit
+  - we will consider the differences within the intervals between the utterance 
 - describe by what means you will test the hypotheses mentioned earlier
 - when you do this you will want to reformulate the hypotheses in a more precise fashion
-  - e.g., if H1 is true, we expect that parameter X is credibly bigger than zero in the posterior distribution
+  - for positive utterances, if H1 is true, we expect the inferred state for honest utterances to be credibly higher that the inferred state for nice utterances in the posterior distribution
+  - if H1 is true, we expect the inferred state for nice utterances to be credibly higher than the inferred state for mean utterances in the posterior distribution
+  - for negative utterances: if H2 is true, we expect the inferred state for mean utterances to be credibly higher than the inferred state for honest utterances in the posterior distribution
+  - if H2 is true, we expect with a credible probability that the inferred state for honest and mean utterances to be equal in the posterior distribution.
