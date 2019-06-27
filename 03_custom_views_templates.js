@@ -40,7 +40,7 @@ const custom_pragmatics = function(config, startingTime) {
             const handle_click = function(startingTime) {
               if (ValidateStar(document.star)) {
                 console.log(printResult(document.star))
-                const time_spent = Date.now();
+                const time_spent = startingTime - Date.now();
                 // We will just save the response and continue to the next view
                 let trial_data = {
                     trial_name: config.name,
