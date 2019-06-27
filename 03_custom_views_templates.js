@@ -9,13 +9,13 @@
 // and has to call babe.findNextView() eventually to proceed to the next view (or the next trial in this view),
 // if it is an trial view it also makes sense to call babe.trial_data.push(trial_data) to save the trial information
 
-const custom_pragmatics = function(config, startingTime) {
+const custom_pragmatics = function(config, startTime) {
     const view = {
         name: config.name,
         CT: 0,
         trials: config.trials,
         // The render functions gets the babe object as well as the current trial in view counter as input
-        render: function (CT, babe, startingTime) {
+        render: function (CT, babe, startTime) {
             // Here, you can do whatever you want, eventually you should call babe.findNextView()
             // to proceed to the next view and if it is an trial type view,
             // you should save the trial information with babe.trial_data.push(trial_data)
@@ -37,10 +37,10 @@ const custom_pragmatics = function(config, startingTime) {
                 document.head.appendChild(script);
 
             // This function will handle  the response
-            const handle_click = function(startingTime) {
+            const handle_click = function(startTime) {
               if (ValidateStar(document.star)) {
                 console.log(printResult(document.star))
-                const time_spent = startingTime;
+                const time_spent = Date.now() - startTime;
                 // We will just save the response and continue to the next view
                 let trial_data = {
                     trial_name: config.name,
