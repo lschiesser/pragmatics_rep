@@ -46,7 +46,7 @@ We *do not* need all the additional info like age etc.
 We *need*: native languages, goal, utterance, *rating*(=inferred state), submission ID, item (domain), time spent (for removing outliers)  
 
 ``` {r}
-d <- select(d, c(trial_number, domain, goal, utterance, inferred_goal_state, languages))
+d <- select(d, c(trial_number, domain, goal, utterance, inferred_goal_state, languages, timeSpent))
 # set data types: RT is int, goal & utterance should be factors
 # utterance is a predictor which is scaled orinally! 
 # factor utterance assigns the ordered levels to the different utterances 
@@ -63,8 +63,8 @@ Remove outliers: exclude participants where German was not a native language, an
 Show means for each design cell: goal x utterance. 
 ```{r}
 library(Rmisc)
-# reaction times could not be coded yet
-#d <- filter(d, timeSpent <= 120000)
+# exclude participants who sepnt more than 30 minutes on the experiment 
+d <- filter(d, timeSpent <= 30)
 #exclude non-native speakers
 d <- filter(d, grepl("Deutsch", languages, ignore.case = T ))
 
