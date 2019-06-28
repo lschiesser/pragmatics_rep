@@ -96,11 +96,15 @@ We only have main trials which are a rating task. The results of these main tria
 We decided not to include practice trials, because it was not part of the original study and we still wanted to replicate it as closely as possible.
 <br>
 The trials are structured in the way that participants are presented with a randomized scenario and the heart rating scale (one to five hearts). The participants then answer the question using the five-heart rating scale. This is an example of a trial:
+<br>
+_Stellen Sie sich vor, dass Lea eine Handy App entwickelt hat, aber nicht weiß wie andere Leute darüber denken. Leonie hat die App ausprobiert. Lea fragt daraufhin Leonie: "Wie ist meine App?" **Leonie möchte ehrlich sein und antwortet: "Die App war hervorragend."**
+<br>
+Was denken Sie: Wie denkt Leonie **wirklich** über die App von Lea?_
 
 
 ## Measured variables
 
-The variables we will measure are the speaker's rating of the performance inferred by the participants which will be measured by the rating scale. Further we will note the utterance and the goal of each trial.
+The variables we will measure are the speaker's rating of the performance inferred by the participants which will be measured by the rating scale. Further we will track the utterance and the goal of each trial.
 <br>
 <br>
 The goal will be treated as a factor, the utterance as an ordered factor (monotonic predictor) and the rating/inferred state as an integer, such that the mean can be calculated.
@@ -109,13 +113,12 @@ The goal will be treated as a factor, the utterance as an ordered factor (monoto
 
 ## Exclusion criteria
 
-In the analysis for single trial data we will exclude all trials, in which the participants took longer than 2 minutes to answer the question.
+In the analysis we will exclude all participants who took longer than 30 minutes to complete the experiment or who are not German native speakers.
 <br>
-From a whole participant we will exclude all non native German speakers.
 
 ## Confirmatory hypothesis testing
 
-The utterances will be transformed into an ordered factor using mo().
+The utterances will be modeled as an ordered factor using mo().
 <br>
 For the statistical model we will use the "brms" package to run a Bayesian regression model, regressing the inferred state against goal, utterance and their interactions. We will also try  a model with random by-domain effects and compare the fit. Further we will consider the differences within the intervals between the utterance.
 <br>
