@@ -79,6 +79,7 @@ ggplot(dm, aes(x=utterance, y=inferred_state, color=goal)) + geom_point()+geom_l
 Fit the model: bayesian model with monotonic effects
 ```{r}
 model1 <- brm(inferred_state ~ mo(utterance)+goal+mo(utterance)*goal, d)
+
 summary(model1)
 marginal_effects(model1, "utterance:goal")
 
