@@ -78,10 +78,10 @@ ggplot(dm, aes(x=utterance, y=inferred_state, color=goal)) + geom_point()+geom_l
 ```
 Fit the model: bayesian model with monotonic effects
 ```{r}
-model1 <- brm(inferred_state ~ mo(utterance)+goal+mo(utterance)*goal, d)
-
-summary(model1)
-marginal_effects(model1, "utterance:goal")
+d<- mutate(d, inferred_state = factor(inferred_state, levels=c("1", "2", "3", "4", "5"), ordered=T))
+model1_1 <-brm(mo(inferred_state)~utterance+goal+utterance*goal, d)
+summary(model1_1)
+marginal_effects(model1_1, "utterance:goal")
 
 ```
 # Check hypotheses:
@@ -92,14 +92,14 @@ marginal_effects(model1, "utterance:goal")
 - Inferred states for mean condition are higher than for honest condition for negative utterances 
 ``` {r}
 # posterior samples
-post_samples <- posterior_samples(model1)%>% as_tibble
+post_samples <- posterior_samples(model1_1)%>% as_tibble
 
-post_ehrlich_hervor <- post_samples$b_Intercept+post_samples$`simo_moutterance1[4]`
-post_nett_hervor <- post_samples$b_Intercept+post_samples$b_goalnett+post_samples$`simo_moutterance:goalnett1[4]`
-post_gemein_hervor <- post_samples$b_Intercept + post_samples$b_goalgemein + post_samples$`simo_moutterance:goalgemein1[4]`
-post_ehrlich_schr <- post_samples$b_Intercept+post_samples$`simo_moutterance1[1]`
-post_nett_schr <- post_samples$b_Intercept + post_samples$b_goalnett + post_samples$`simo_moutterance1[1]`
-post_gemein_schr <- post_samples$b_Intercept+post_samples$b_goalgemein+post_samples$`simo_moutterance:goalgemein1[1]`
+post_ehrlich_hervor <- post_samples$b_Intercept+post_samples$b_utteranceE4
+post_nett_hervor <- post_samples$b_Intercept+post_samples$b_goalnett+post_samples$`b_utteranceE4:goalnett`
+post_gemein_hervor <- post_samples$b_Intercept + post_samples$b_goalgemein + post_samples$`b_utteranceE4:goalgemein`
+post_ehrlich_schr <- post_samples$b_Intercept+post_samples$b_utterance.L
+post_nett_schr <- post_samples$b_Intercept + post_samples$b_goalnett + post_samples$`b_utterance.L:goalnett`
+post_gemein_schr <- post_samples$b_Intercept+post_samples$b_goalgemein+post_samples$`b_utterance.L:goalgemein`
 
 mean(mean(post_ehrlich_hervor)>mean(post_nett_hervor))
 mean(mean(post_nett_hervor)>mean(post_gemein_hervor))
@@ -109,18 +109,18 @@ mean(mean(post_ehrlich_schr)<mean(post_gemein_schr))
 Fit a model with random by-item efects
 Check same hypotheses 
 ```{r}
-model2 <- brm(inferred_state ~ mo(utterance)+goal+mo(utterance)*goal+(1|domain), d)
+model2 <- brm(mo(inferred_state) ~ utterance+goal+utterance*goal+(1|domain), d)
 summary(model2)
 
 # check same hypotheses
 post_samples2 <- posterior_samples(model2)%>% as_tibble
 
-post_ehrlich_hervor2 <- post_samples2$b_Intercept+post_samples2$`simo_moutterance1[4]`
-post_nett_hervor2 <- post_samples2$b_Intercept+post_samples2$b_goalnett+post_samples2$`simo_moutterance:goalnett1[4]`
-post_gemein_hervor2 <- post_samples2$b_Intercept + post_samples2$b_goalgemein + post_samples2$`simo_moutterance:goalgemein1[4]`
-post_ehrlich_schr2 <- post_samples2$b_Intercept+post_samples2$`simo_moutterance1[1]`
-post_nett_schr2 <- post_samples2$b_Intercept + post_samples2$b_goalnett + post_samples2$`simo_moutterance1[1]`
-post_gemein_schr2 <- post_samples2$b_Intercept+post_samples2$b_goalgemein+post_samples2$`simo_moutterance:goalgemein1[1]`
+post_ehrlich_hervor2 <- post_samples2$b_Intercept+post_samples2$b_utteranceE4
+post_nett_hervor2 <- post_samples2$b_Intercept+post_samples2$b_goalnett+post_samples2$`b_utteranceE4:goalnett`
+post_gemein_hervor2 <- post_samples2$b_Intercept + post_samples2$b_goalgemein + post_samples2$`b_utteranceE4:goalgemein`
+post_ehrlich_schr2 <- post_samples2$b_Intercept+post_samples2$b_utterance.L
+post_nett_schr2 <- post_samples2$b_Intercept + post_samples2$b_goalnett + post_samples2$`b_utterance.L:goalnett`
+post_gemein_schr2 <- post_samples2$b_Intercept+post_samples2$b_goalgemein+post_samples2$`b_utterance.L:goalgemein`
 
 mean(mean(post_ehrlich_hervor2)>mean(post_nett_hervor2))
 mean(mean(post_nett_hervor2)>mean(post_gemein_hervor2))
