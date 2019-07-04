@@ -13,9 +13,11 @@ This study is a replication of the second experiment from the paper "Talking wit
 <br>
 We verify two major hypotheses.
 <br>
-Hypothesis 1 is concerned with the positive utterances and predicts that, on the one hand, the mean inferred state of the goal "nett" (nice) will be greater than the mean state of the goal "ehrlich" (honest). On the other hand, it predicts that the mean state of the goal "nett" will be greater than the mean state of the goal "gemein" (mean).
+***Both hypotheses focus on the utterances, which are "furchtbar", "schlecht", "okay", "gut", and "hervorragend" (terrible, bad, okay, good, amazing). While "furchtbar" and "schlecht" are obviously negative utterances, "gut" and "hervorragend" are positive ones. The word "okay" is deliberatelychoosen as a neutral utterance.***
 <br>
-Hypothesis 2 is concerned with the negative utterances and first predicts that the mean inferred state of the goal "gemein" will be greater than the mean state of the goal "ehrlich". Secondly, this hypothesis predicts that the mean state of the goal "ehrlich" will be the same as the mean state of the goal "nett".
+Hypothesis 1 is concerned with the positive utterances and predicts that, on the one hand, the mean inferred state of the goal "nett" (nice) will be ***smaller*** than the mean state of the goal "ehrlich" (honest). On the other hand, it predicts that the mean state of the goal "nett" will be greater than the mean state of the goal "gemein" (mean).
+<br>
+Hypothesis 2 is concerned with the negative utterances and first predicts that the mean inferred state of the goal "gemein" (mean) will be greater than the mean state of the goal "ehrlich" (honest). Secondly, this hypothesis predicts that the mean state of the goal "ehrlich" (honest) will be the same as the mean state of the goal "nett" (nice).
 <br>
 1. Hypothesis 1: positive utterances:
     - mean(nice_inferred) < mean (honest_inferred)
@@ -34,7 +36,7 @@ Effect Utt|inferred_schr|inferred_schl|inferred_ok|inferred_gut|inferred_herv
 # Design of the Experiment
 
 ## General remarks about the design
-This is a rating study with a within-subject 3x5 factorial design. The design matrix is composed of three goals (nett, ehrlich, gemein = nice, honest, mean) and five utterances (furchtbar, schlecht, okay, gut, hervorragend = terrible, bad, okay, good, amazing).
+This is a rating study with a within-subject 3x5 factorial design. The design matrix is composed of the ***factor "goal" with three levels (nett, ehrlich, gemein = nice, honest, mean) and the factor "utterances" with five levels (furchtbar, schlecht, okay, gut, hervorragend = terrible, bad, okay, good, amazing).***
 
 ## Sampling plan
 
@@ -44,7 +46,9 @@ As we want to investigate if the results will be the same in German as in Englis
 
 ## Materials
 
-Out study is based on the paper **Yoon, E. J., Tessler, M. H., Goodman, N. D., & Frank, M. C. (2016). Talking with tact: Polite language as a balance between kindness and informativity. In _Proceedings of the 38th annual conference of the cognitive science society_ (pp. 2771-2776). Cognitive Science Society.**. We also used a star rating plugin, which is available under https://www.jqueryscript.net/other/Simple-jQuery-Star-Rating-System-For-Bootstrap-3.html. Furthermore, we used the material provided by the authors of the original paper: langcog.stanford.edu/expts/EJY/polgrice/L2_S/polgrice_L2_S.html. The sentences were translated and adapted into German by ourselves.
+Out study is based on the paper **Yoon, E. J., Tessler, M. H., Goodman, N. D., & Frank, M. C. (2016). Talking with tact: Polite language as a balance between kindness and informativity. In _Proceedings of the 38th annual conference of the cognitive science society_ (pp. 2771-2776). Cognitive Science Society.**. We also used a heart rating plugin, which is available under https://www.jqueryscript.net/other/Simple-jQuery-Star-Rating-System-For-Bootstrap-3.html. ***This rating scale consisting of hearts was choosen, because we think it is more intuitive to rate something in forms (stars or hearts) than in numbers, as these kinds of ratings scales are very established in our everyday life. Think about amazon or yelp reviews.***
+<br>
+Furthermore, we used the material provided by the authors of the original paper: langcog.stanford.edu/expts/EJY/polgrice/L2_S/polgrice_L2_S.html. Lastly, the sentences were translated and adapted into German by ourselves.
 
 ## Procedure
 
@@ -84,7 +88,7 @@ Bitte klicken Sie auf "Weiter", um das Experiment zu beginnen._
 
 ### Main test phase
 
-The trials start with the presentation of the scenario and underneath the participant sees the rating scale consisting of 5 hearts. Participants are asked to rate a total of 15 scenarios using the heart rating scale. The scenarios, the goals, the names and the utterances used in each trial are randomized.
+The trials start with the presentation of the scenario and underneath the participant sees the rating scale consisting of 5 hearts. Participants are asked to rate a total of 15 scenarios using the heart rating scale. ***The scenarios begin with a fact, for example "Lisa backed a cake." and then this person asks someone else "How was my cake?". The other person in the scenario answers this question with one of the 15 utterance(5) x goal(3) rating-combinations, for example "Laura wants to be honest and says: "Your cake was okay.". In the real experiment all the scenarios are translated into German.*** The scenarios, the goals, the names of the persons in the scenarios and the utterances used in each trial are randomized.
 
 ### Structure of the Experiment
 The experiment starts with a welcome text, followed by instructions. Then the main test phase starts and in the end participants are asked a few questions like their age, gender and they have the chance to give us feedback or leave comments.
@@ -108,7 +112,7 @@ Was denken Sie: Wie denkt Leonie **wirklich** über die App von Lea?_
 The variables we will measure are the speaker's rating of the performance inferred by the participants which will be measured by the rating scale. Further we will track the utterance and the goal of each trial.
 <br>
 <br>
-The goal will be treated as a factor, the utterance as an ordered factor and the rating/inferred state as an integer, such that the mean can be calculated to produce a figure.
+The goal will be treated as a factor, the utterance as an ordered factor and the rating/inferred state as an ***ordinal variable, such that the mean can be calculated and a figure be produced for visualization.***
 
 # Analysis Plan
 
@@ -119,7 +123,7 @@ In the analysis we will exclude all participants who took longer than 30 minutes
 
 ## Confirmatory hypothesis testing
 
-For the model the rating/inferred state will be transformed to an ordered factor and estimated using mo().
+For the model the rating/inferred state will be transformed to an ordered factor and estimated using mo(). ***And the distribution family will be changed to "cumulative".***
 <br>
 For the statistical model we will use the "brms" package to run a Bayesian regression model, regressing the inferred state against goal, utterance and their interactions. We will also try  a model with random by-domain effects and compare the fit.
 <br>
