@@ -1,7 +1,7 @@
 # Replication study: Talking with tact
 [![Netlify Status](https://api.netlify.com/api/v1/badges/17f3cca5-242b-4774-9e0f-f38add0725d8/deploy-status)](https://app.netlify.com/sites/pragmatics-exp/deploys)
 
-[Link to branch deploy](https://ls-test.pragmatics-exp.netlify.com/)
+[Heroku Babe Server](https://pragmatics-ptb.herokuapp.com/)
 
 ## Plan
 Due Date | Topic | Assigned to
